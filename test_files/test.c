@@ -1,32 +1,29 @@
-#include"../m_header_file/m_complex.h"
+#include <stdlib.h>
+#include <complex.h>
+#include <stdio.h>
 
-void main(void)
+void cprint(double complex *Z){
+    int n = 3;
+    for(int i = 0; i < n; i++){
+        printf("%lf + i%lf\n", creal(Z[i]), cimag(Z[i]));
+    }
+}
+void m_orth(double complex *T, int n){
+    double length = 0;
+    for(int i = 0; i < n; i++){
+
+    }
+}
+int main(void)
 {
-    m_complex a = {1, 3};
-    m_complex b = {2, 2};
-    m_complex c = {0, 0};
-    c = c_add(a, b);
-    printf("%4.3lf+%4.3lfi\n", c.real, c.image);
-    c = c_sub(a, b);
-    printf("%4.3lf+%4.3lfi\n", c.real, c.image);
-    c = c_mul(a,b);
-    printf("%4.3lf+%4.3lfi\n", c.real, c.image);
-    c = c_divi(a,b);
-    printf("%4.3lf+%4.3lfi\n", c.real, c.image);
-    printf("%4.3lf  %4.3lf\n", c_mod(a), c_mod(b));
-    m_complex* A;
-    A = (m_complex *)malloc(4*sizeof(m_complex));
-    A[0].real =1;A[0].image =1;
-    A[1].real =1;A[1].image =2;    
-    A[2].real =2;A[2].image =1;
-    A[3].real =2;A[3].image =3;
-    c_mprintf(A, 2);
-    c = c_det(A, 2);
-    printf("%4.3lf+%4.3lfi\n", c.real, c.image);
-    m_complex Ap[2] = {{1,2}, {4,6}};
-    m_complex B[2] = {{2,1}, {3,1}};
-    printf("%4.3lf+%4.3lfi\n", c_dot(Ap, B, 2).real, c_dot(Ap, B, 2).image);
-    printf("%4.3lf+%4.3lfi\n", c_dot(Ap, Ap, 2).real, c_dot(Ap, Ap, 2).image);
-
-
+    double complex z1 = 1+4*I;
+    double complex z2 = 2+1*I;
+    double complex z3;
+    z3 = z1/2;
+    double complex *Z;
+    Z = (double complex *)malloc(3*sizeof(double complex));
+    Z[0] = z1;Z[1] = z2;Z[2] = z3;
+    cprint(Z);
+    printf("%lf + i%lf\n", creal(z3), cimag(z3));
+    return 0;
 }
