@@ -5,7 +5,7 @@
 
 #include "../m_header_file/random_num/mt19937ar-master/mt19937ar.c"
 
-#define D 3
+#define D 8
 
 int main(void)
 {
@@ -38,7 +38,12 @@ int main(void)
     printf("final mod_xi is %3.4lf+i%3.4lf, mod_eta is %3.4lf+i%3.4lf\n", creal(mod_xi), cimag(mod_xi), creal(mod_eta), cimag(mod_eta));
 
     //Givens 变换
+    printf("Gievens trans.\n");
     m_Givens(xi, eta, D);
+
+    //Householder 变换
+    printf("Householder trans.\n");
+    m_Householder(xi, eta, D);
 
 
     free(xi);

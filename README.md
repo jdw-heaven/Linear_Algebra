@@ -7,6 +7,12 @@
 ```
 mkdir build
 cd build
-cmake -DCMAKE_PREFIX_PATH=/absolute/path/to/libtorch ..
-cmake --build . --config Release
+cmake ..
+make
+
+//运行
+./filename
 ```
+
+
+## Note: Some applications need the "libtorch" package, the path is configured in the "c_cpp_properties.json" file. It is recommended not to change the location of the file, because there are different applications call each other.

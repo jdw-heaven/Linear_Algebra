@@ -1,3 +1,7 @@
+#ifndef _TENSOR_CAL_H_	
+#define _TENSOR_CAL_H_
+
+
 #include <stdlib.h>
 #include <complex.h>
 #include <stdio.h>
@@ -58,3 +62,6 @@ double complex * m_mul(double complex *A, double complex *B, int Arow, int Acolu
     return C;
     free(C);
 }
+
+
+#endif
