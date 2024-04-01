@@ -27,6 +27,9 @@
 2. Householder矩阵
    记$\boldsymbol{a} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \boldsymbol{b} = \begin{bmatrix} \sqrt{2} \\ 0 \end{bmatrix}$，则$\mathbf{H}  = \mathbf{I} - 2\boldsymbol{\omega }\boldsymbol{\omega ^{\intercal}}$, 其中$\boldsymbol{\omega } = \frac{\mathbf{{a}-\mathbf{b}}}{\Vert \mathbf{a}-\mathbf{b}\Vert}$.
    综上，Householder矩阵$U = \frac{\sqrt{2} }{2} \begin{bmatrix} 1& 1 \\ 1 & -1\end{bmatrix}$.
+3. 对于二维的情况，我们设$\mu_{1} = [\cos (\alpha) \quad sin(\alpha)]^{\intercal}, \mu_{2} = [\cos (\alpha + \theta /2) \quad sin(\alpha + \theta /2)]^{\intercal} $.令$H_{1} = I-2\mu_{1} \mu_{1} ^{\intercal}, H_{2} = I-2\mu_{2} \mu_{2} ^{\intercal} $, 则$H_{1} = \begin{bmatrix} -\cos (2\alpha) & \sin (2\alpha) \\ \sin (2\alpha) & \cos (2\alpha) \end{bmatrix}, H_{2} = \begin{bmatrix} -\cos (2\alpha + \theta) & \sin (2\alpha + \theta) \\ \sin (2\alpha + \theta) & \cos (2\alpha + \theta) \end{bmatrix} $, 故$H_{2}H_{1} = \begin{bmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos \theta \end{bmatrix} $,对应于Givens矩阵。
+
+综上， 1中的Givens矩阵可以表示成$U = \begin{bmatrix} -\cos (2\alpha) & \sin (2\alpha) \\ \sin (2\alpha) & \cos (2\alpha) \end{bmatrix} \begin{bmatrix} -\cos (2\alpha + \pi /4) & \sin (2\alpha + \pi /4) \\ \sin (2\alpha + \pi /4) & \cos (2\alpha + \pi /4) \end{bmatrix} $ 其中$\alpha \in \left[0, 2\pi \right)$中任意实数.
 
 ## Question2
 ### 理论基础
