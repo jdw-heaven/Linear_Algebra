@@ -35,7 +35,8 @@ double complex * m_Householder(double complex *xi, double complex *eta, int D){
     //check
     printf("U(Householder) is :\n");
     m_cprint(U, D, D);
-
+    printf("isUnitary? Udag*U is :\n");
+    m_isUnitary(U, D);
     printf("Uxi is :\n");
     m_cprint(m_mul(U, xi, D, D, 1), D, 1);
     printf("well, a great success. its equ. to eta.\n\n");
