@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/home/heaven/Desktop/doc/libtorch/**",
-                "/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include"
+                "/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include",
+                "/home/heaven/Desktop/doc/CLAPACK/INCLUDE"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

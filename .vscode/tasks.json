@@ -1,3 +1,5 @@
+
+
 {
     "tasks": [
         {
@@ -8,9 +10,15 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                "-llapacke",
+                "-llapack",
+                "-lcblas",
+                //"-lm",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
-                "-lm"
+                "-lm",
+                //"-I",
+                //"/home/heaven/Desktop/doc/CLAPACK/INCLUDE"
             ],
             "options": {
                 "cwd": "${fileDirname}"

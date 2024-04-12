@@ -1,29 +1,48 @@
-#include <stdlib.h>
-#include <complex.h>
-#include <stdio.h>
+#include "../Heisenberg_model/include/header_file.h"
+const int L = 2;    //the size of sublattice
+ double complex Sx[4] = {0,0.5,0.5,0}; //the Pauli matrix
+ double complex Sy[4] = {0,-0.5*I,0.5*I,0};
+ double complex Sz[4] = {0.5,0,0,-0.5};
 
-void cprint(double complex *Z){
-    int n = 3;
-    for(int i = 0; i < n; i++){
-        printf("%lf + i%lf\n", creal(Z[i]), cimag(Z[i]));
-    }
-}
-void m_orth(double complex *T, int n){
-    double length = 0;
-    for(int i = 0; i < n; i++){
 
-    }
-}
 int main(void)
 {
-    double complex z1 = 1+4*I;
-    double complex z2 = 2+1*I;
-    double complex z3;
-    z3 = z1/2;
-    double complex *Z;
-    Z = (double complex *)malloc(3*sizeof(double complex));
-    Z[0] = z1;Z[1] = z2;Z[2] = z3;
-    cprint(Z);
-    printf("%lf + i%lf\n", creal(z3), cimag(z3));
+    double complex Sx[4] = {0,0.5,0.5,0}; //the Pauli matrix
+    double complex Sy[4] = {0,-0.5*I,0.5*I,0};
+    double complex Sz[4] = {0.5,0,0,-0.5};
+    double complex SS[16] = {0.25,0,0,0,
+                            0,-0.25,0.5,0,
+                            0,0.5,-0.25,0,
+                            0,0,0,0.25};
+
+    m_cprint(Sx, 2, 2);
+    m_cprint(Sy, 2, 2);
+    m_cprint(Sz, 2, 2);
+    double complex *S;
+    S = (double complex*)malloc(4*4*sizeof(double complex));
+    m_cprint(SS, 4, 4);
+    m_KP(Sz, Sz, 2, 2, 2, 2, S);
+    m_cprint(S, 4, 4);
+    int x = 9;
+    printf("%d\n", x%2);
+    printf("%d\n", x);
+
+    int state[4] = {1,1,1,1};
+    int num = 10;
+    printf("%d\n", state_to_num(state, 2));
+    num_to_state(state, num, 2);
+    printf("%d\n", state[0]);
+    printf("%d\n", state[1]);
+    printf("%d\n", state[2]);
+    printf("%d\n", state[3]);
+    
+    int *state1;
+    state1 = (int*)malloc(2*2*sizeof(int));
+    printf("%d\n", (int)pow(2,2*2));
+
+    free(state1);
+    free(S);
     return 0;
 }
+
+
