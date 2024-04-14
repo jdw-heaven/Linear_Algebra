@@ -119,7 +119,8 @@ $$
    伪代码这里就不给出来了，下面只简要介绍必须的约定。
    我们通过公式$H_{mn} = \bra{m}H\ket{n} $来给出哈密顿量的矩阵。
    我们需要知道两件事——1.状态的规定。2.算符对状态的作用。我们一个一个说。
-   首先是状态如何规定。我以0来代表状态$\ket{\uparrow} $（这样是为了与课上的规定相容），以1来代表状态$\ket{\downarrow}$。则对于4个粒子，状态$\ket{0000} = \ket{0}, \ket{1111} = \ket{1*2^{3}+1*2^{2}+1*2^{1}+1*2^{0}} = \ket{15}$（我们用计算机的天然语言来表示）。同样，我们也可以算出给定状态对应的序号。可以以一个数组来存储原生状态，而通过代数式来表达序号。
+   首先是状态如何规定。我以0来代表状态$\ket{\uparrow} $（这样是为了与课上的规定相容），以1来代表状态$\ket{\downarrow}$。则对于4个粒子，状态$\ket{0000} = \ket{0}, \ket{1111} = \ket{1*2^{3}+1*2^{2}+1*2^{1}+1*2^{0}} = \ket{15}$（我们用计算机的天然语言来表示，其实也就是二进制）。同样，我们也可以算出给定状态对应的序号。可以以一个数组来存储原生状态，而通过代数式来表达序号。(见APPENDIX)
+
    下面，我们需要知道各算符对状态的作用。我们有$\hat{S^{+}} \ket{\uparrow} = 0\ket{}, \hat{S^{-}} \ket{\uparrow} = \ket{\downarrow}, \hat{S^{+}} \ket{\downarrow} = \ket{\uparrow}, \hat{S^{-}} \ket{\downarrow} = 0\ket{} $，于是有
    $$
    \begin{aligned}
@@ -145,8 +146,25 @@ $$
 
 如图（以4\*4为例）：
 ![](picture/hamiltonian.png)
-需要分格点内外将耦合的自旋表达出来。
+需要分格点内外将耦合的自旋表达出来。我们对内部分行、列；外部分上下左右进行计算。
 
 
 # Results
 
+# APPENDIX
+### the state and it's correxponding number
+$\left( \ket{\uparrow}, \ket{\downarrow} \right) \bigotimes \left( \ket{\uparrow}, \ket{\downarrow} \right) $
+|                         |                           |                           |                             |
+|-------------------------|---------------------------|---------------------------|-----------------------------|
+| 00                      | 01                        | 10                        | 11                          |
+| $\ket{\uparrow \uparrow}$ | $\ket{\uparrow \downarrow}$ | $\ket{\downarrow \uparrow}$ | $\ket{\downarrow \downarrow}$ |
+| 0                       | 1                         | 2                         | 3                           |
+
+$\left( \ket{\uparrow}, \ket{\downarrow} \right) \bigotimes \left( \ket{\uparrow}, \ket{\downarrow} \right) \bigotimes \left( \ket{\uparrow}, \ket{\downarrow} \right) $
+
+
+|                                    |                                      |                                      |                                        |                                      |                                        |                                        |                                          |
+|------------------------------------|--------------------------------------|--------------------------------------|----------------------------------------|--------------------------------------|----------------------------------------|----------------------------------------|------------------------------------------|
+| 000                                | 001                                  | 010                                  | 011                                    | 100                                  | 101                                    | 110                                    | 111                                      |
+| $\ket{\uparrow \uparrow \uparrow}$ | $\ket{\uparrow \uparrow \downarrow}$ | $\ket{\uparrow \downarrow \uparrow}$ | $\ket{\uparrow \downarrow \downarrow}$ | $\ket{\downarrow \uparrow \uparrow}$ | $\ket{\downarrow \uparrow \downarrow}$ | $\ket{\downarrow \downarrow \uparrow}$ | $\ket{\downarrow \downarrow \downarrow}$ |
+| 0                                  | 1                                    | 2                                    | 3                                      | 4                                    | 5                                      | 6                                      | 7                                        |

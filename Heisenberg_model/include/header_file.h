@@ -56,6 +56,32 @@ void m_isUnitary(double complex *A, int n){
     free(U);
 }
 
+//is ermie?
+void m_isermie(double complex *A, int n){
+    int isermie = 1;
+    for(int i=0; i<n; i++){
+        if( fabs(cimag(A[i*n+i])) > 1e-10 ){
+            isermie = 0;
+        }else{
+            ;
+        }
+    }
+    for(int i=0; i<n-1; i++){
+        for(int j=1; j<n; j++){
+            if( fabs(cimag(A[i*n+j])+cimag(A[j*n+i])) > 1e-10 ){
+                isermie = 0;
+            }else{
+                ;
+            }
+        }
+    }
+    if( isermie == 0 ){
+        printf("Not ermie.\n");
+    }else{
+        printf("Ermie.\n");
+    }
+}
+
 //multiply
 double complex * m_mul(double complex *A, double complex *B, int Arow, int Acolumn, int Bcolumn){
     double complex *C;
@@ -117,8 +143,8 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
     }
     int numj = 0, coe = 1;
     //H_ij
-    for(int i=0; i<(int)pow(2,2*L); i++){
-        for(int j=0; j<(int)pow(2,2*L); j++){
+    for(int i=0; i<(int)pow(2,L*L); i++){
+        for(int j=0; j<(int)pow(2,L*L); j++){
             //the row nearest particles' coupling
             for(int k=0; k<L; k++){
                 for(int l=0; l<L-1; l++){ //each row has the_sublattice_size-1 bonds
@@ -127,28 +153,29 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
                     num_to_state(state, j, L);
                     //Sx and Sy
                     coe = 1;
-                    if(state[k*L+l]==1){
-                        coe = coe*(-1);
-                    }else{
-                        ;
-                    }
                     if(state[k*L+l+1]==1){
                         coe = coe*(-1);
                     }else{
                         ;
                     }
-                    state[k*L+l] = state[k*L+l]-1==0? 0:1;
                     state[k*L+l+1] = state[k*L+l+1]-1==0? 0:1;
+                    if(state[k*L+l]==1){
+                        coe = coe*(-1);
+                    }else{
+                        ;
+                    }
+                    state[k*L+l] = state[k*L+l]-1==0? 0:1;
+    
                     //trans to num
                     numj = state_to_num(state, L);
                     if(i==numj){
-                        the_hamiltonian[i*(int)pow(2,2*L)+j] += 0.25+coe*0.25*I;
+                        the_hamiltonian[i*(int)pow(2,L*L)+j] += 0.25-coe*0.25;
                     }else{
                         ;
                     }
                     //Sz
                     if(i==j){
-                        the_hamiltonian[i*(int)pow(2,2*L)+j] += coe*0.25;
+                        the_hamiltonian[i*(int)pow(2,L*L)+j] += coe*0.25;
                     }
                 }
             }
@@ -176,13 +203,13 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
                     //trans to num
                     numj = state_to_num(state, L);
                     if(i==numj){
-                        the_hamiltonian[i*(int)pow(2,2*L)+j] += 0.25+coe*0.25*I;
+                        the_hamiltonian[i*(int)pow(2,L*L)+j] += 0.25-coe*0.25;
                     }else{
                         ;
                     }
                     //Sz
                     if(i==j){
-                        the_hamiltonian[i*(int)pow(2,2*L)+j] += coe*0.25;
+                        the_hamiltonian[i*(int)pow(2,L*L)+j] += coe*0.25;
                     }
                 }
             }
@@ -194,8 +221,6 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
                 num_to_state(state, j, L);
                 //Sx and Sy
                 coe = 1;
-                //trans j to state
-                num_to_state(state, j, L);
                 if(state[0*L+k]==1){
                     coe = coe*(-1);
                 }else{
@@ -205,13 +230,13 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
                 //trans to num
                 numj = state_to_num(state, L);
                 if(i==numj){
-                    the_hamiltonian[i*(int)pow(2,2*L)+j] += 0.5*the_mean_spin[0*L*L+(L-1)*L+k]+coe*0.5*the_mean_spin[1*L*L+(L-1)*L+k]*I;
+                    the_hamiltonian[i*(int)pow(2,L*L)+j] += 0.5*the_mean_spin[0*L*L+(L-1)*L+k]+coe*0.5*the_mean_spin[1*L*L+(L-1)*L+k]*I;
                 }else{
                     ;
                 }
                 //Sz
                 if(i==j){
-                    the_hamiltonian[i*(int)pow(2,2*L)+j] += coe*0.5*the_mean_spin[2*L*L+(L-1)*L+k];
+                    the_hamiltonian[i*(int)pow(2,L*L)+j] += coe*0.5*the_mean_spin[2*L*L+(L-1)*L+k];
                 }
             }
 
@@ -222,8 +247,6 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
                 num_to_state(state, j, L);
                 //Sx and Sy
                 coe = 1;
-                //trans j to state
-                num_to_state(state, j, L);
                 if(state[(L-1)*L+k]==1){
                     coe = coe*(-1);
                 }else{
@@ -233,13 +256,13 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
                 //trans to num
                 numj = state_to_num(state, L);
                 if(i==numj){
-                    the_hamiltonian[i*(int)pow(2,2*L)+j] += 0.5*the_mean_spin[0*L*L+k]+coe*0.5*the_mean_spin[1*L*L+k]*I;
+                    the_hamiltonian[i*(int)pow(2,L*L)+j] += 0.5*the_mean_spin[0*L*L+k]+coe*0.5*the_mean_spin[1*L*L+k]*I;
                 }else{
                     ;
                 }
                 //Sz
                 if(i==j){
-                    the_hamiltonian[i*(int)pow(2,2*L)+j] += coe*0.5*the_mean_spin[2*L*L+k];
+                    the_hamiltonian[i*(int)pow(2,L*L)+j] += coe*0.5*the_mean_spin[2*L*L+k];
                 }
             }
 
@@ -250,8 +273,6 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
                 num_to_state(state, j, L);
                 //Sx and Sy
                 coe = 1;
-                //trans j to state
-                num_to_state(state, j, L);
                 if(state[k*L]==1){
                     coe = coe*(-1);
                 }else{
@@ -261,13 +282,13 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
                 //trans to num
                 numj = state_to_num(state, L);
                 if(i==numj){
-                    the_hamiltonian[i*(int)pow(2,2*L)+j] += 0.5*the_mean_spin[0*L*L+k*L+L-1]+coe*0.5*the_mean_spin[1*L*L+k*L+L-1]*I;
+                    the_hamiltonian[i*(int)pow(2,L*L)+j] += 0.5*the_mean_spin[0*L*L+k*L+L-1]+coe*0.5*the_mean_spin[1*L*L+k*L+L-1]*I;
                 }else{
                     ;
                 }
                 //Sz
                 if(i==j){
-                    the_hamiltonian[i*(int)pow(2,2*L)+j] += coe*0.5*the_mean_spin[2*L*L+k*L+L-1];
+                    the_hamiltonian[i*(int)pow(2,L*L)+j] += coe*0.5*the_mean_spin[2*L*L+k*L+L-1];
                 }
             }
 
@@ -278,8 +299,6 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
                 num_to_state(state, j, L);
                 //Sx and Sy
                 coe = 1;
-                //trans j to state
-                num_to_state(state, j, L);
                 if(state[k*L+L-1]==1){
                     coe = coe*(-1);
                 }else{
@@ -289,18 +308,20 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
                 //trans to num
                 numj = state_to_num(state, L);
                 if(i==numj){
-                    the_hamiltonian[i*(int)pow(2,2*L)+j] += 0.5*the_mean_spin[0*L*L+k*L]+coe*0.5*the_mean_spin[1*L*L+k*L]*I;
+                    the_hamiltonian[i*(int)pow(2,L*L)+j] += 0.5*the_mean_spin[0*L*L+k*L]+coe*0.5*the_mean_spin[1*L*L+k*L]*I;
                 }else{
                     ;
                 }
                 //Sz
                 if(i==j){
-                    the_hamiltonian[i*(int)pow(2,2*L)+j] += coe*0.5*the_mean_spin[2*L*L+k*L];
+                    the_hamiltonian[i*(int)pow(2,L*L)+j] += coe*0.5*the_mean_spin[2*L*L+k*L];
                 }
             }
+
+            
         }
     }
-    free(state);  //a big bug!!!!
+    free(state);  
 }
 
 
