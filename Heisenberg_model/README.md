@@ -27,6 +27,9 @@ In this article, TABLE &#x2162; gives some parameters of the ground state and FI
 
 ![TABLE &#x2162;](picture/fig6.png)
 
+磁矩[^3]
+![magnet_moment](picture/M.png)
+
 But the $M$ this aricle gives is very complex, it's divided into two types:
 $$
 \begin{aligned}
@@ -46,16 +49,16 @@ S(\pi,\pi) &= {1\over N} \sum\limits_{i,j} (-1)^{x_j-x_i+y_j-y_i}C(i,j) \\
 \end{aligned}
 $$
 
-I can't fully understand these, so I find another definition in NTNU johnof's personal webpage[^2]:
+I can't fully understand these, so I find another definition in NTNU johnof's personal webpage[^2]
 
 > Let us next investigate the amount of magnetic order in the system. Thus we need to identify an order parameter for antiferromagnetic order. Note that the magnetization $M = (1/N)\sum _{i} \left\langle \mathbf{S_{i}} \right\rangle $can not be used since it is zero in the presence of antiferromagnetic order, because the two sublattices give equal-magnitude but opposite-sign contributions to $ M $. Instead the natural order parameter is the so-called sublattice magnetization, defined by averaging $ \left\langle \mathbf{S_{i}} \right\rangle $ only over the sites of one of the two sublattices. Without loss of generality, let’s pick sublattice A, where the putative ordering is in the z direction. The magnitude of the sublattice magnetization is thus :
 > $M_{A} = \frac{1}{N_{A}}\sum_{j \in A} \left\langle S_{j}^{z} \right\rangle $
 
-I'll use this formula to try to calculate $M$.
-
 [^1]:Sandvik, Anders W. “Finite-Size Scaling of the Ground-State Parameters of the Two-Dimensional Heisenberg Model.” Physical Review B, vol. 56, no. 18, Nov. 1997, pp. 11678–90. Crossref, https://doi.org/10.1103/physrevb.56.11678.
+
 [^2]:https://folk.ntnu.no/johnof/magnetism-2016.pdf
 
+[^3]:Isaev, Leonid, Gerardo Guzman Ortiz, Jagiellonian University, Bloomington, In, Usa, Instituto de Estructura de la Materia Csic, Madrid and Spain.. “Hierarchical mean-field approach to the J 1 -J 2 Heisenberg model on a square lattice.” Physical Review B 79 (2008): 024409.
 
 ## mean-field method
 首先，需要明确的是，我们一下的讨论完全是基于自旋为1/2的情况来的；因此，需要明确下述所有具体公式的适用范围。
@@ -148,8 +151,135 @@ $$
 ![](picture/hamiltonian.png)
 需要分格点内外将耦合的自旋表达出来。我们对内部分行、列；外部分上下左右进行计算。
 
+磁矩用期望值s来表示，有$M^{2} = S^{2}_{x}+S^{2}_{y}+S^{2}_{z} = s^{2} $
+
 
 # Results
+根据下面的结果我们可以看到，能量算的是非常不错的，因为文献中算的是4\*4的，而我的计算机最多只能跑3\*3。但我们可以看到，随子格的尺度增加，能量是减小的。可以预期4\*4的结果会和文献中的差不多。
+磁矩的计算结果和文献1中差异较大，但和文献3的2\*2的结果符合的很好。
+
+当L=2时，
+
+1. No.1
+   ```
+    the initial spin is :
+    0.1298+i0.0000  -0.0465+i0.0000  -0.4701+i0.0000  -0.4999+i0.0000  
+    -0.4999+i0.0000  -0.1288+i0.0000  0.4523+i0.0000  -0.1297+i0.0000  
+    -0.0216+i0.0000  -0.4340+i0.0000  -0.0851+i0.0000  -0.0501+i0.0000  
+
+    the ground eigenvalue is: 
+    -0.775951
+    the spin is :
+    0.0561+i-0.0000  -0.0561+i-0.0000  -0.0561+i0.0000  0.0561+i0.0000  
+    -0.3947+i0.0000  0.3947+i-0.0000  0.3947+i-0.0000  -0.3947+i0.0000  
+    0.1816+i0.0000  -0.1816+i0.0000  -0.1816+i0.0000  0.1816+i0.0000  
+
+    the magnet moment M is:
+    0.4381
+    [1] + Done                       "/usr/bin/gdb" --interpreter=mi --tty=${DbgTerm} 0<"/tmp/Microsoft-MIEngine-In-dmwy1kk4.mvh" 1>"/tmp/Microsoft-MIEngine-Out-0wsvlpjn.zic"
+   ```
+2. No.2
+   ```
+    the initial spin is :
+    -0.4042+i0.0000  -0.4824+i0.0000  -0.0222+i0.0000  0.3943+i0.0000  
+    0.0386+i0.0000  -0.2183+i0.0000  0.2899+i0.0000  -0.1397+i0.0000  
+    -0.1974+i0.0000  0.2291+i0.0000  -0.3189+i0.0000  -0.1692+i0.0000  
+
+    the ground eigenvalue is: 
+    -0.775951
+    the spin is :
+    0.3599+i-0.0000  -0.3599+i0.0000  -0.3599+i-0.0000  0.3599+i0.0000  
+    -0.1292+i-0.0000  0.1292+i-0.0000  0.1292+i0.0000  -0.1292+i0.0000  
+    -0.2138+i0.0000  0.2138+i0.0000  0.2138+i0.0000  -0.2138+i0.0000  
+
+    the magnet moment M is:
+    0.4381
+    [1] + Done                       "/usr/bin/gdb" --interpreter=mi --tty=${DbgTerm} 0<"/tmp/Microsoft-MIEngine-In-ewwfufps.gns" 1>"/tmp/Microsoft-MIEngine-Out-ofh4edul.wvq"
+   ```
+3. No.3
+   ```
+    the initial spin is :
+    0.3304+i0.0000  -0.4330+i0.0000  -0.2334+i0.0000  0.0043+i0.0000  
+    0.0694+i0.0000  -0.3464+i0.0000  0.3289+i0.0000  0.4553+i0.0000  
+    0.2850+i0.0000  0.3570+i0.0000  0.1711+i0.0000  -0.3016+i0.0000  
+
+    the ground eigenvalue is: 
+    -0.775951
+    the spin is :
+    0.3459+i0.0000  -0.3459+i-0.0000  -0.3459+i0.0000  0.3459+i0.0000  
+    0.1958+i-0.0000  -0.1958+i-0.0000  -0.1958+i0.0000  0.1958+i0.0000  
+    -0.1841+i0.0000  0.1841+i0.0000  0.1841+i0.0000  -0.1841+i0.0000  
+
+    the magnet moment M is:
+    0.4381
+    [1] + Done                       "/usr/bin/gdb" --interpreter=mi --tty=${DbgTerm} 0<"/tmp/Microsoft-MIEngine-In-mo2djqws.igu" 1>"/tmp/Microsoft-MIEngine-Out-icq3wpxd.kcs"
+   ```
+
+| Parameters              | Value            |
+|--------------------------|------------------|
+| Ground state energy $E$ | -0.775951    |
+| Sublattice magnetization $M$ | 0.4381     |
+
+当n=3时
+1. No.1
+   ```
+    the initial spin is :
+    0.3147+i0.0000  0.2989+i0.0000  0.3544+i0.0000  0.2460+i0.0000  -0.2377+i0.0000  -0.2389+i0.0000  0.1880+i0.0000  0.1120+i0.0000  0.3507+i0.0000  
+    -0.0801+i0.0000  0.1747+i0.0000  0.1587+i0.0000  0.1198+i0.0000  0.3082+i0.0000  -0.2695+i0.0000  -0.3548+i0.0000  -0.3002+i0.0000  -0.4938+i0.0000  
+    -0.2803+i0.0000  0.2609+i0.0000  0.4644+i0.0000  0.3798+i0.0000  -0.0676+i0.0000  0.4742+i0.0000  -0.4647+i0.0000  0.2401+i0.0000  -0.3010+i0.0000  
+
+    the ground eigenvalue is: 
+    -0.732702
+    the spin is :
+    -0.2614+i-0.0000  0.2440+i-0.0000  -0.2613+i0.0000  0.2440+i-0.0000  -0.2292+i-0.0000  0.2440+i-0.0000  -0.2613+i-0.0000  0.2440+i-0.0000  -0.2614+i0.0000  
+    0.1598+i0.0000  -0.1493+i-0.0000  0.1599+i0.0000  -0.1493+i-0.0000  0.1402+i-0.0000  -0.1493+i-0.0000  0.1599+i-0.0000  -0.1493+i0.0000  0.1598+i0.0000  
+    0.3129+i0.0000  -0.2922+i0.0000  0.3129+i0.0000  -0.2922+i0.0000  0.2745+i0.0000  -0.2922+i0.0000  0.3129+i0.0000  -0.2922+i0.0000  0.3129+i0.0000  
+
+    the magnet moment M is:
+    0.4379
+    [1] + Done                       "/usr/bin/gdb" --interpreter=mi --tty=${DbgTerm} 0<"/tmp/Microsoft-MIEngine-In-kwhddnaf.wy3" 1>"/tmp/Microsoft-MIEngine-Out-i4htteaf.w31"
+   ```
+2. No.2
+   ```
+    the initial spin is :
+    -0.2221+i0.0000  0.1412+i0.0000  -0.2827+i0.0000  0.1383+i0.0000  -0.4496+i0.0000  0.2284+i0.0000  0.1193+i0.0000  0.4661+i0.0000  -0.0115+i0.0000  
+    -0.0545+i0.0000  -0.0705+i0.0000  -0.4984+i0.0000  0.3459+i0.0000  0.2450+i0.0000  0.4131+i0.0000  0.3004+i0.0000  -0.0278+i0.0000  -0.4612+i0.0000  
+    -0.0332+i0.0000  0.3961+i0.0000  -0.2112+i0.0000  -0.4202+i0.0000  0.1771+i0.0000  0.2681+i0.0000  0.3069+i0.0000  0.1461+i0.0000  -0.4301+i0.0000  
+
+    the ground eigenvalue is: 
+    -0.732702
+    the spin is :
+    -0.2637+i-0.0000  0.2463+i-0.0000  -0.2637+i-0.0000  0.2463+i0.0000  -0.2313+i0.0000  0.2463+i0.0000  -0.2637+i0.0000  0.2463+i-0.0000  -0.2637+i0.0000  
+    -0.3134+i-0.0000  0.2926+i-0.0000  -0.3134+i0.0000  0.2926+i-0.0000  -0.2749+i-0.0000  0.2926+i-0.0000  -0.3134+i0.0000  0.2926+i-0.0000  -0.3134+i0.0000  
+    -0.1550+i0.0000  0.1447+i0.0000  -0.1550+i0.0000  0.1447+i0.0000  -0.1359+i0.0000  0.1447+i0.0000  -0.1550+i0.0000  0.1447+i0.0000  -0.1550+i0.0000  
+
+    the magnet moment M is:
+    0.4379
+    [1] + Done                       "/usr/bin/gdb" --interpreter=mi --tty=${DbgTerm} 0<"/tmp/Microsoft-MIEngine-In-4xkinpo3.vqv" 1>"/tmp/Microsoft-MIEngine-Out-s1fw4f0m.s1u"
+   ```
+3. No.3
+   ```
+    the initial spin is :
+    -0.0906+i0.0000  -0.1538+i0.0000  -0.1131+i0.0000  0.4182+i0.0000  0.1089+i0.0000  -0.2558+i0.0000  -0.3364+i0.0000  0.0390+i0.0000  -0.2926+i0.0000  
+    -0.3727+i0.0000  -0.1175+i0.0000  0.2629+i0.0000  0.0821+i0.0000  -0.1040+i0.0000  -0.0026+i0.0000  0.3842+i0.0000  0.3734+i0.0000  0.4178+i0.0000  
+    0.0542+i0.0000  -0.3327+i0.0000  -0.0741+i0.0000  -0.4146+i0.0000  0.3858+i0.0000  0.2969+i0.0000  0.4907+i0.0000  0.1481+i0.0000  0.1428+i0.0000  
+
+    the ground eigenvalue is: 
+    -0.732702
+    the spin is :
+    -0.3052+i0.0000  0.2850+i-0.0000  -0.3051+i0.0000  0.2850+i0.0000  -0.2677+i0.0000  0.2850+i0.0000  -0.3051+i0.0000  0.2850+i-0.0000  -0.3052+i0.0000  
+    0.1784+i0.0000  -0.1666+i-0.0000  0.1785+i-0.0000  -0.1666+i-0.0000  0.1565+i-0.0000  -0.1666+i0.0000  0.1785+i-0.0000  -0.1666+i0.0000  0.1784+i0.0000  
+    0.2584+i0.0000  -0.2413+i0.0000  0.2584+i0.0000  -0.2413+i0.0000  0.2267+i0.0000  -0.2413+i0.0000  0.2584+i0.0000  -0.2413+i0.0000  0.2584+i0.0000  
+
+    the magnet moment M is:
+    0.4379
+    [1] + Done                       "/usr/bin/gdb" --interpreter=mi --tty=${DbgTerm} 0<"/tmp/Microsoft-MIEngine-In-pacrhaey.jcg" 1>"/tmp/Microsoft-MIEngine-Out-d1433wnx.yxj"
+   ```
+
+| Parameters              | Value            |
+|--------------------------|------------------|
+| Ground state energy $E$ | -0.732702    |
+| Sublattice magnetization $M$ | 0.4379     |
 
 # APPENDIX
 ### the state and it's correxponding number

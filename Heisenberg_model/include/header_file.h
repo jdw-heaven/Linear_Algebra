@@ -113,6 +113,17 @@ void m_KP(double complex *A, double complex *B, int Arow, int Acolumn, int Brow,
     }
 }
 
+// find the minimum eigenvalue
+int m_fmin(double complex *eigenvalues, int n){
+    int num = 0;
+    for(int i=1; i<n; i++){
+        if( creal(eigenvalues[i-1])<creal(eigenvalues[i]) ){
+            num = i-1;
+        }
+    }
+    return num;
+}
+
 //function to trans state and number
 int state_to_num(int *state, int L){
     int num = 0;
@@ -132,6 +143,7 @@ void num_to_state(int *state, int num, int L){
 
 //the Hamiltonian matrix
 void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamiltonian){
+    for(int i=0; i<(int)pow(2,2*L*L); i++){ the_hamiltonian[i] = 0+0*I; }
     //a matrix with 2^the_sublattice_size to stand for the state
     int *state;
     state = (int*)malloc(L*L*sizeof(int));
@@ -324,7 +336,64 @@ void m_Ham(const int L, double complex *the_mean_spin, double complex *the_hamil
     free(state);  
 }
 
+//renew the mean_spin and give the MAX error
+double ren(double complex *mean_spin, double complex *g_eigenvetor, const int L){
+    double E_MAX = 0;
+    double complex x = 0+0*I;
+    double complex y = 0+0*I;
+    double complex z = 0+0*I;
+    int num = 0;
+    int coe = 1;
+    int *state;
+    state = (int*)malloc(L*L*sizeof(int));
+    //遍历粒子
+    for(int k=0; k<L*L; k++){
+        x = 0+0*I;
+        y = 0+0*I;
+        z = 0+0*I;
+        // 遍历态，系数在g_eigenvector中
+        for(int i=0; i<(int)pow(2,L*L); i++){
+            for(int j=0; j<(int)pow(2,L*L); j++){
 
+                //Sx and Sy
+                num_to_state(state, j, L);
+                coe = 1;
+                if(state[k]==1){
+                    coe = coe*(-1);
+                }else{;}
+                state[k] = state[k]-1==0? 0:1;
+                num = state_to_num(state, L);
+                if(i==num){
+                    x += conj(g_eigenvetor[i])*g_eigenvetor[j]*0.5;
+                    y += conj(g_eigenvetor[i])*g_eigenvetor[j]*coe*0.5*I;
+                }
+
+                //Sz
+                if(i==j){
+                    z += conj(g_eigenvetor[i])*g_eigenvetor[j]*coe*0.5;
+                }
+            }
+        }
+        // find max error
+        if(fabs( fabs(creal(mean_spin[0*L*L+k])) - fabs(creal(x)) )>E_MAX) E_MAX = fabs( fabs(creal(mean_spin[0*L*L+k])) - fabs(creal(x)) );
+        if(fabs( fabs(creal(mean_spin[1*L*L+k])) - fabs(creal(y)) )>E_MAX) E_MAX = fabs( fabs(creal(mean_spin[1*L*L+k])) - fabs(creal(y)) );
+        if(fabs( fabs(creal(mean_spin[2*L*L+k])) - fabs(creal(z)) )>E_MAX) E_MAX = fabs( fabs(creal(mean_spin[2*L*L+k])) - fabs(creal(z)) );
+        //renew mean_spin
+        mean_spin[0*L*L+k] = x;
+        mean_spin[1*L*L+k] = y;
+        mean_spin[2*L*L+k] = z;
+
+    }
+    free(state);
+    return E_MAX;
+}
+
+//the magnet moment
+void magnet_moment(double sx, double sy, double sz){
+    double t = sx*sx+sy*sy+sz*sz;
+    printf("the magnet moment M is:\n");
+    printf("%3.4lf\n", sqrt(t));
+}
 
 
 #endif

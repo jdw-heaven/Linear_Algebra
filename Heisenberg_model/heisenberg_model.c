@@ -1,8 +1,8 @@
 //spin-1/2 AF Heisenberg_model
 #include "include/header_file.h"
 
-const int L = 2;    //the size of sublattice
-const double error = 1e-5;
+const int L = 3;    //the size of sublattice
+const double error = 1e-4;
 
 int main(void)
 {
@@ -17,6 +17,7 @@ int main(void)
     mean_spin = (double complex*)malloc(3*L*L*sizeof(double complex));
     for(int i = 0; i < 3*L*L; i++){
         mean_spin[i] = (genrand_real1()-0.5)+0*I; // they're all real numbers
+    
     }
     printf("the initial spin is :\n");
     m_cprint(mean_spin, 3, L*L);
@@ -40,9 +41,9 @@ int main(void)
     do{
         E_MAX = 0;  //make sure each loop with a zero E_MAX
         m_Ham(L, mean_spin, Ham);   //calculate hamiltonian
-        printf("the hamiltonian is :\n");
-        m_cprint(Ham, (int)pow(2,L*L), (int)pow(2,L*L));
-        m_isermie(Ham, (int)pow(2,L*L));
+        //printf("the hamiltonian is :\n");
+        //m_cprint(Ham, (int)pow(2,L*L), (int)pow(2,L*L));
+        //m_isermie(Ham, (int)pow(2,L*L));
 
         /*
         for(int i=0; i<(int)pow(2,2*L*L); i++){
@@ -65,27 +66,36 @@ int main(void)
         }
 
 
-        printf("g_eigenvector is :\n");
-        m_cprint(g_eigenvector, (int)pow(2,L*L), 1);
+        //printf("g_eigenvector is :\n");
+        //m_cprint(g_eigenvector, (int)pow(2,L*L), 1);
         //printf("test the eigenvector is range by row or col:\n");
         //m_cprint(m_mul(Hamp, g_eigenvector, (int)pow(2,L*L), (int)pow(2,L*L), 1), (int)pow(2,L*L), 1);
         
 
-        //renew the mean_spin
-
-
-
-
+        //renew the mean_spin and give the MAX error
+        E_MAX = ren(mean_spin, g_eigenvector, L);
         
-        printf("the eigenvalues are: \n");
-        m_print(eigenvalues, 1, (int)pow(2,L*L));
-        printf("the corresponding eigenvectors are (range as column): \n");
-        m_cprint(Ham, (int)pow(2,L*L), (int)pow(2,L*L));
+        //printf("the ground eigenvalue is: \n");
+        // we have L*L particles, so we need to divde L*L
+        //printf("%lf\n", eigenvalues[0]/(L*L));
+        //printf("the corresponding eigenvectors are (range as column): \n");
+        //m_cprint(Ham, (int)pow(2,L*L), (int)pow(2,L*L));
         //printf("is eigenvectors unitary?\n");
         //m_isUnitary(eigenvectors, (int)pow(2,2*L));
+        //printf("the spin is :\n");
+        //m_cprint(mean_spin, 3, L*L);
+        //magnet_moment(creal(mean_spin[0*L*L+0]), creal(mean_spin[1*L*L+0]), creal(mean_spin[2*L*L+0]));
+
 
         
     }while( E_MAX>error );
+    printf("the ground eigenvalue is: \n");
+    // we have L*L particles, so we need to divde L*L
+    printf("%lf\n", eigenvalues[0]/(L*L));
+    printf("the spin is :\n");
+    m_cprint(mean_spin, 3, L*L);
+    //the magnet moment:
+    magnet_moment(creal(mean_spin[0*L*L+0]), creal(mean_spin[1*L*L+0]), creal(mean_spin[2*L*L+0]));
 
     free(Ham);
     free(eigenvalues);
