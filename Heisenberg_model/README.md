@@ -9,6 +9,8 @@
 # 理论基础
 ## Quantum Monte Carlo
 
+## Note: 3\*3 的子格是有问题的，只能是偶数
+
 This part is the results form an article[^1]——Finite-size scaling of the ground-state parameters of the two-dimensional Heisenberg model, I'll compare my answer with its.
 
 In this article, TABLE &#x2162; gives some parameters of the ground state and FIG 6 givers the ground-energy and the L's relation, just as fellows:
