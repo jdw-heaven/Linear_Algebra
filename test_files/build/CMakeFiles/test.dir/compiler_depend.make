@@ -3,23 +3,7 @@
 
 CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_files/test.cpp \
   /usr/include/stdc-predef.h \
-  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/torch.h \
-  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/all.h \
-  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/autograd.h \
-  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/autograd.h \
-  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/variable.h \
-  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/utils/python_stub.h \
-  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/Export.h \
-  /home/heaven/Desktop/doc/libtorch/include/c10/macros/Export.h \
-  /home/heaven/Desktop/doc/libtorch/include/c10/macros/cmake_macros.h \
-  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/cpp_hook.h \
-  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/function_hook.h \
-  /home/heaven/Desktop/doc/libtorch/include/ATen/Tensor.h \
-  /home/heaven/Desktop/doc/libtorch/include/ATen/core/Tensor.h \
-  /home/heaven/Desktop/doc/libtorch/include/ATen/core/TensorBody.h \
-  /home/heaven/Desktop/doc/libtorch/include/c10/core/Device.h \
-  /home/heaven/Desktop/doc/libtorch/include/c10/core/DeviceType.h \
-  /usr/include/c++/12/functional \
+  /usr/include/c++/12/iostream \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
   /usr/include/features.h \
@@ -32,111 +16,18 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
   /usr/include/c++/12/pstl/pstl_config.h \
-  /usr/include/c++/12/bits/stl_function.h \
-  /usr/include/c++/12/bits/move.h \
-  /usr/include/c++/12/type_traits \
-  /usr/include/c++/12/backward/binders.h \
-  /usr/include/c++/12/new \
-  /usr/include/c++/12/bits/exception.h \
-  /usr/include/c++/12/tuple \
-  /usr/include/c++/12/bits/stl_pair.h \
-  /usr/include/c++/12/bits/utility.h \
-  /usr/include/c++/12/bits/uses_allocator.h \
-  /usr/include/c++/12/bits/invoke.h \
-  /usr/include/c++/12/bits/functional_hash.h \
-  /usr/include/c++/12/bits/hash_bytes.h \
-  /usr/include/c++/12/bits/refwrap.h \
-  /usr/include/c++/12/bits/std_function.h \
-  /usr/include/c++/12/typeinfo \
-  /usr/include/c++/12/bits/functexcept.h \
-  /usr/include/c++/12/bits/exception_defines.h \
-  /usr/include/c++/12/unordered_map \
-  /usr/include/c++/12/initializer_list \
-  /usr/include/c++/12/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
-  /usr/include/c++/12/bits/new_allocator.h \
-  /usr/include/c++/12/bits/memoryfwd.h \
-  /usr/include/c++/12/ext/alloc_traits.h \
-  /usr/include/c++/12/bits/alloc_traits.h \
-  /usr/include/c++/12/bits/stl_construct.h \
-  /usr/include/c++/12/bits/stl_iterator_base_types.h \
-  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/12/bits/concept_check.h \
-  /usr/include/c++/12/debug/assertions.h \
-  /usr/include/c++/12/bits/ptr_traits.h \
-  /usr/include/c++/12/ext/numeric_traits.h \
-  /usr/include/c++/12/bits/cpp_type_traits.h \
-  /usr/include/c++/12/ext/type_traits.h \
-  /usr/include/c++/12/ext/aligned_buffer.h \
-  /usr/include/c++/12/bits/hashtable.h \
-  /usr/include/c++/12/bits/hashtable_policy.h \
-  /usr/include/c++/12/bits/stl_algobase.h \
-  /usr/include/c++/12/bits/stl_iterator.h \
-  /usr/include/c++/12/debug/debug.h \
-  /usr/include/c++/12/bits/predefined_ops.h \
-  /usr/include/c++/12/bits/enable_special_members.h \
-  /usr/include/c++/12/bits/node_handle.h \
-  /usr/include/c++/12/bits/unordered_map.h \
-  /usr/include/c++/12/bits/range_access.h \
-  /usr/include/c++/12/bits/erase_if.h \
-  /usr/include/c++/12/vector \
-  /usr/include/c++/12/bits/stl_uninitialized.h \
-  /usr/include/c++/12/bits/stl_vector.h \
-  /usr/include/c++/12/bits/stl_bvector.h \
-  /usr/include/c++/12/bits/vector.tcc \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/compare \
-  /usr/include/c++/12/bits/stl_algo.h \
-  /usr/include/c++/12/bits/algorithmfwd.h \
-  /usr/include/c++/12/bits/stl_heap.h \
-  /usr/include/c++/12/bits/stl_tempbuf.h \
-  /usr/include/c++/12/bits/uniform_int_dist.h \
-  /usr/include/c++/12/cstdlib \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/ostream \
   /usr/include/c++/12/ios \
   /usr/include/c++/12/iosfwd \
   /usr/include/c++/12/bits/stringfwd.h \
+  /usr/include/c++/12/bits/memoryfwd.h \
   /usr/include/c++/12/bits/postypes.h \
   /usr/include/c++/12/cwchar \
   /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
@@ -144,14 +35,27 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/c++/12/exception \
+  /usr/include/c++/12/bits/exception.h \
   /usr/include/c++/12/bits/exception_ptr.h \
+  /usr/include/c++/12/bits/exception_defines.h \
   /usr/include/c++/12/bits/cxxabi_init_exception.h \
+  /usr/include/c++/12/typeinfo \
+  /usr/include/c++/12/bits/hash_bytes.h \
+  /usr/include/c++/12/new \
+  /usr/include/c++/12/bits/move.h \
+  /usr/include/c++/12/type_traits \
   /usr/include/c++/12/bits/nested_exception.h \
   /usr/include/c++/12/bits/char_traits.h \
   /usr/include/c++/12/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
   /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/c++/12/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
@@ -160,33 +64,90 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/c++/12/cctype \
   /usr/include/ctype.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
   /usr/include/c++/12/bits/ios_base.h \
   /usr/include/c++/12/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/c++/12/bits/locale_classes.h \
   /usr/include/c++/12/string \
+  /usr/include/c++/12/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
+  /usr/include/c++/12/bits/new_allocator.h \
+  /usr/include/c++/12/bits/functexcept.h \
+  /usr/include/c++/12/bits/cpp_type_traits.h \
   /usr/include/c++/12/bits/ostream_insert.h \
   /usr/include/c++/12/bits/cxxabi_forced.h \
+  /usr/include/c++/12/bits/stl_iterator_base_types.h \
+  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/12/bits/concept_check.h \
+  /usr/include/c++/12/debug/assertions.h \
+  /usr/include/c++/12/bits/stl_iterator.h \
+  /usr/include/c++/12/ext/type_traits.h \
+  /usr/include/c++/12/bits/ptr_traits.h \
+  /usr/include/c++/12/bits/stl_function.h \
+  /usr/include/c++/12/backward/binders.h \
+  /usr/include/c++/12/ext/numeric_traits.h \
+  /usr/include/c++/12/bits/stl_algobase.h \
+  /usr/include/c++/12/bits/stl_pair.h \
+  /usr/include/c++/12/bits/utility.h \
+  /usr/include/c++/12/debug/debug.h \
+  /usr/include/c++/12/bits/predefined_ops.h \
+  /usr/include/c++/12/bits/refwrap.h \
+  /usr/include/c++/12/bits/invoke.h \
+  /usr/include/c++/12/bits/range_access.h \
+  /usr/include/c++/12/initializer_list \
   /usr/include/c++/12/bits/basic_string.h \
+  /usr/include/c++/12/ext/alloc_traits.h \
+  /usr/include/c++/12/bits/alloc_traits.h \
+  /usr/include/c++/12/bits/stl_construct.h \
   /usr/include/c++/12/string_view \
+  /usr/include/c++/12/bits/functional_hash.h \
   /usr/include/c++/12/bits/string_view.tcc \
   /usr/include/c++/12/ext/string_conversions.h \
+  /usr/include/c++/12/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -221,16 +182,82 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
   /usr/include/c++/12/bits/locale_facets.tcc \
   /usr/include/c++/12/bits/basic_ios.tcc \
   /usr/include/c++/12/bits/ostream.tcc \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/12/bits/specfun.h \
+  /usr/include/c++/12/limits \
+  /usr/include/c++/12/tr1/gamma.tcc \
+  /usr/include/c++/12/tr1/special_function_util.h \
+  /usr/include/c++/12/tr1/bessel_function.tcc \
+  /usr/include/c++/12/tr1/beta_function.tcc \
+  /usr/include/c++/12/tr1/ell_integral.tcc \
+  /usr/include/c++/12/tr1/exp_integral.tcc \
+  /usr/include/c++/12/tr1/hypergeometric.tcc \
+  /usr/include/c++/12/tr1/legendre_function.tcc \
+  /usr/include/c++/12/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/12/tr1/poly_hermite.tcc \
+  /usr/include/c++/12/tr1/poly_laguerre.tcc \
+  /usr/include/c++/12/tr1/riemann_zeta.tcc \
+  /usr/include/c++/12/complex \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/torch.h \
+  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/all.h \
+  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/autograd.h \
+  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/autograd.h \
+  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/variable.h \
+  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/utils/python_stub.h \
+  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/Export.h \
+  /home/heaven/Desktop/doc/libtorch/include/c10/macros/Export.h \
+  /home/heaven/Desktop/doc/libtorch/include/c10/macros/cmake_macros.h \
+  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/cpp_hook.h \
+  /home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/function_hook.h \
+  /home/heaven/Desktop/doc/libtorch/include/ATen/Tensor.h \
+  /home/heaven/Desktop/doc/libtorch/include/ATen/core/Tensor.h \
+  /home/heaven/Desktop/doc/libtorch/include/ATen/core/TensorBody.h \
+  /home/heaven/Desktop/doc/libtorch/include/c10/core/Device.h \
+  /home/heaven/Desktop/doc/libtorch/include/c10/core/DeviceType.h \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/Exception.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/macros/Macros.h \
   /usr/include/c++/12/cassert \
   /usr/include/assert.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/StringUtil.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/string_utils.h \
-  /usr/include/c++/12/sstream \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/bits/sstream.tcc \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/string_view.h \
   /usr/include/c++/12/algorithm \
   /usr/include/c++/12/pstl/glue_algorithm_defs.h \
@@ -240,7 +267,6 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
   /usr/include/strings.h \
   /usr/include/c++/12/iterator \
   /usr/include/c++/12/bits/stream_iterator.h \
-  /usr/include/c++/12/limits \
   /usr/include/c++/12/cstddef \
   /usr/include/c++/12/variant \
   /usr/include/c++/12/bits/parse_numbers.h \
@@ -280,30 +306,6 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/c++/12/cmath \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/c++/12/bits/specfun.h \
-  /usr/include/c++/12/tr1/gamma.tcc \
-  /usr/include/c++/12/tr1/special_function_util.h \
-  /usr/include/c++/12/tr1/bessel_function.tcc \
-  /usr/include/c++/12/tr1/beta_function.tcc \
-  /usr/include/c++/12/tr1/ell_integral.tcc \
-  /usr/include/c++/12/tr1/exp_integral.tcc \
-  /usr/include/c++/12/tr1/hypergeometric.tcc \
-  /usr/include/c++/12/tr1/legendre_function.tcc \
-  /usr/include/c++/12/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/12/tr1/poly_hermite.tcc \
-  /usr/include/c++/12/tr1/poly_laguerre.tcc \
-  /usr/include/c++/12/tr1/riemann_zeta.tcc \
   /home/heaven/Desktop/doc/libtorch/include/c10/core/MemoryFormat.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/ArrayRef.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/Deprecated.h \
@@ -325,7 +327,6 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
   /home/heaven/Desktop/doc/libtorch/include/c10/util/Float8_e5m2.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/Half.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/complex.h \
-  /usr/include/c++/12/complex \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/complex_math.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/complex_utils.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/util/Half-inl.h \
@@ -937,7 +938,6 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
   /usr/include/c++/12/bits/this_thread_sleep.h \
   /home/heaven/Desktop/doc/libtorch/include/ATen/core/grad_mode.h \
   /home/heaven/Desktop/doc/libtorch/include/c10/core/GradMode.h \
-  /usr/include/c++/12/iostream \
   /home/heaven/Desktop/doc/libtorch/include/torch/csrc/jit/frontend/function_schema_parser.h \
   /home/heaven/Desktop/doc/libtorch/include/ATen/core/op_registration/op_registration.h \
   /home/heaven/Desktop/doc/libtorch/include/ATen/core/ATenOpList.h \
@@ -9060,26 +9060,6 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/atleast_2d_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isposinf_meta.h:
-
-/usr/include/c++/12/iostream:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_nearest2d_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_log_softmax_backward_data.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mkldnn_linear_backward_input_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_leaf_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/transpose_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/arccosh_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_expit_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/convolution.h:
-
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_coalesced_ops.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_lu_meta.h:
@@ -9172,6 +9152,14 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /usr/include/c++/12/bits/basic_string.h:
 
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isposinf_meta.h:
+
+/usr/include/c++/12/iostream:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_nearest2d_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_log_softmax_backward_data.h:
+
 /home/heaven/Desktop/doc/libtorch/include/ATen/core/boxing/KernelFunction.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_gammaincc.h:
@@ -9252,95 +9240,79 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_expm1_ops.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_shifted_chebyshev_polynomial_t.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/TensorUtils.h:
+/home/heaven/Desktop/doc/libtorch/include/c10/util/string_utils.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/output_nr_native.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/quantized_batch_norm.h:
 
-/usr/include/c++/12/tr1/riemann_zeta.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_addmm.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/max_pool3d_with_indices_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_sum_backward_ops.h:
-
-/usr/include/c++/12/bits/stl_deque.h:
+/usr/include/c++/12/bits/stl_heap.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convert_weight_to_int4pack_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/grid_sampler_2d_native.h:
+/usr/include/c++/12/bits/algorithmfwd.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lerp_native.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_matrix_rank.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/DeprecatedTypePropertiesRegistry.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/less_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/gru_cell.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/column_stack_ops.h:
+/usr/include/c++/12/cstdint:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/q_per_channel_scales_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fbgemm_linear_int8_weight_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/tril_indices.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/native_layer_norm_backward_native.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_shifted_chebyshev_polynomial_u_native.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cslt_sparse_mm_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/any_native.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/select_scatter_ops.h:
 
-/usr/include/c++/12/bits/invoke.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/trunc.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_to_sparse_csc_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/and_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/c10/core/GradMode.h:
+/usr/include/c++/12/bits/stl_uninitialized.h:
 
-/usr/include/c++/12/unordered_map:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/matrix_H_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isinf_ops.h:
+/usr/include/c++/12/unordered_set:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_unsafe_index_put_native.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/miopen_rnn_backward.h:
 
-/home/heaven/Desktop/doc/libtorch/include/c10/util/C++17.h:
+/usr/include/c++/12/type_traits:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
+/usr/include/c++/12/cstddef:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/pad_sequence.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/empty_permuted.h:
 
-/home/heaven/Desktop/doc/libtorch/include/c10/util/hash.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/blackman_window.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_floating_point_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/im2col.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_prelu_kernel_native.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/softplus_native.h:
 
-/usr/include/c++/12/ext/concurrence.h:
+/usr/include/c++/12/bits/stl_set.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hardshrink_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/acosh_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/c10/core/DispatchKey.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_pdist_backward_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_adaptive_avg_pool2d_native.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mode_native.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/q_zero_point_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cast_Double_native.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/leaky_relu_backward_meta.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_nearest1d_backward.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/conv_transpose2d_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/c10/core/DeviceType.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_bilinear2d_backward_native.h:
+/home/heaven/Desktop/doc/libtorch/include/c10/core/impl/PythonDispatcherTLS.h:
 
-/usr/include/c++/12/limits:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/vander_native.h:
 
-/usr/include/c++/12/bits/stream_iterator.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ge_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/max_pool2d_ops.h:
-
-/usr/include/c++/12/ios:
-
-/usr/include/ctype.h:
+/usr/include/c++/12/bits/node_handle.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/embedding_backward_native.h:
 
@@ -9350,21 +9322,23 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /usr/include/c++/12/ext/atomicity.h:
 
-/usr/include/c++/12/pstl/glue_algorithm_defs.h:
+/usr/include/ctype.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/multi_margin_loss_backward.h:
+/usr/include/c++/12/tr1/gamma.tcc:
 
-/usr/include/c++/12/bits/localefwd.h:
+/home/heaven/Desktop/doc/libtorch/include/c10/util/accumulate.h:
 
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/all.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/elu_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cos_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/elu_backward_meta.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/digamma_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/empty_like_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/c10/util/string_view.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/record_stream.h:
 
-/usr/include/c++/12/bits/ptr_traits.h:
+/usr/include/c++/12/bits/stl_vector.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/ivalue.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/pow_ops.h:
 
@@ -9384,35 +9358,185 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_abs_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_shifted_chebyshev_polynomial_t.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/string_utils.h:
-
 /usr/include/c++/12/bits/basic_ios.tcc:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_thnn_fused_lstm_cell_backward_impl_native.h:
+/home/heaven/Desktop/doc/libtorch/include/c10/macros/cmake_macros.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/meshgrid.h:
+/usr/include/c++/12/tr1/poly_laguerre.tcc:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/empty_quantized.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_cos_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_nearest2d_meta.h:
+/usr/include/c++/12/tr1/modified_bessel_func.tcc:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/select_scatter.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/floor_divide_ops.h:
 
-/usr/include/c++/12/pstl/execution_defs.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_copy_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_scaled_modified_bessel_k1_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/matmul_backward.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_euclidean_dist.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/max_pool2d_with_indices_backward.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/dequantize_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_lstsq.h:
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/torch.h:
 
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/functional/upsampling.h:
+/usr/include/stdlib.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_nearest_exact3d.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_reshape_alias_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/repeat_interleave_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_pin_memory_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/avg_pool3d_backward_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_fft_r2c_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_is_acceptable_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/roll_ops.h:
+
+/usr/include/c++/12/tr1/ell_integral.tcc:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fake_quantize_per_tensor_affine_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_lu_factor_ex.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_ctc_loss_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lshift_native.h:
+
+/usr/include/c++/12/cwchar:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_mkldnn_transpose.h:
+
+/usr/include/libintl.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/gather_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/reflection_pad1d_backward_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/rand_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_mkldnn_transpose_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_adaptive_avg_pool2d_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/q_zero_point_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/leaky_relu_backward_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/conv_transpose2d_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_bilinear2d_backward_native.h:
+
+/usr/include/c++/12/limits:
+
+/usr/include/c++/12/bits/locale_conv.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_svd.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/nanmedian_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_modified_bessel_k0_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/split_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bernoulli_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/embedding_bag_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/TypeIndex.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cudnn_rnn.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_tensor_size_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sparse_dim_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/q_scale.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/istft_ops.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_index_put_impl.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_ldl_solve.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_sum_backward.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/modules/pooling.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_nearest_exact1d_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_log_softmax_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cosh_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/pad_sequence_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/svd_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_affine_grid_generator_backward_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/custom_class.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_pad_packed_sequence_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/12/bits/streambuf_iterator.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/Allocator.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/maximum_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mkldnn_linear_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_reshape_from_tensor.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_empty_affine_quantized_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/huber_loss_ops.h:
+
+/usr/include/c++/12/unordered_map:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/GradMode.h:
+
+/usr/include/c++/12/tuple:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/BFloat16-inl.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_batch_norm_impl_index.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_to_cpu_ops.h:
+
+/usr/include/c++/12/bits/unordered_map.h:
+
+/usr/include/c++/12/ext/aligned_buffer.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_add_batch_dim.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/function_schema_inl.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bitwise_or_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/diag_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sinh_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/row_stack_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/Tensor.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_version_ops.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/angle_native.h:
 
@@ -9448,9 +9572,33 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_functional_assert_async.h:
 
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/grid_sampler_3d_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/variable.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_euclidean_dist_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_empty_affine_quantized.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_trilinear3d_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_rfftn_native.h:
+
+/usr/include/c++/12/bits/basic_string.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/heaviside_ops.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_unsafe_index.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/replication_pad1d_native.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_unsafe_index_put_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/broadcast_tensors.h:
 
 /home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/data/datasets/base.h:
 
@@ -9468,21 +9616,15 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/nextafter_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/grad_mode.h:
-
-/usr/include/c++/12/bits/shared_ptr_base.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/functional/normalization.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_thnn_differentiable_lstm_cell_backward.h:
-
-/usr/include/c++/12/bits/istream.tcc:
-
-/usr/include/c++/12/bits/allocated_ptr.h:
-
 /usr/include/wctype.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/native_batch_norm_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ger_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/triu_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_copy_from_ops.h:
 
 /usr/include/c++/12/bits/stl_multiset.h:
 
@@ -9502,7 +9644,119 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /usr/include/c++/12/cinttypes:
 
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cdist_forward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_functional_assert_async_ops.h:
+
+/usr/include/c++/12/algorithm:
+
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/cartesian_prod.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/jit/frontend/function_schema_parser.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fbgemm_pack_gemm_matrix_fp16_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_bicubic2d_aa_backward_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/avg_pool2d.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/exp_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_validate_sparse_compressed_tensor_args_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_autocast_to_full_precision_ops.h:
+
+/usr/include/c++/12/ext/type_traits.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/xlogy_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/scatter_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_segment_reduce_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/Formatting.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/angle_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_tensor_strides_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/aminmax_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/take_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/square_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/numpy_T.h:
+
+/usr/include/c++/12/stdexcept:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_efficientzerotensor.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/frobenius_norm_native.h:
+
+/usr/include/c++/12/bits/hashtable_policy.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_amp_foreach_non_finite_check_and_unscale_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ne_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_distributed.h:
+
+/usr/include/c++/12/bits/allocated_ptr.h:
+
+/usr/include/c++/12/bits/istream.tcc:
+
+/usr/include/c++/12/bits/predefined_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_ifft2_ops.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_lerp_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/huber_loss_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/autograd.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_solve_triangular.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/Float8_e4m3fn.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_tanh.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/abs_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/native_layer_norm_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/atanh_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/functional/pixelshuffle.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_embedding_bag_sparse_backward_native.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sum_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_mul.h:
+
+/usr/include/c++/12/bits/std_mutex.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_set_to_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/q_per_channel_axis_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/concat.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/squeeze.h:
+
+/usr/include/c++/12/cstdlib:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/argwhere_ops.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/sign.h:
 
@@ -9511,6 +9765,120 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/resize_as_native.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/argmax_ops.h:
+
+/usr/include/stdio.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_debug_has_internal_overlap_ops.h:
+
+/usr/include/time.h:
+
+/usr/include/c++/12/bits/alloc_traits.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/convolution_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/nll_loss_nd_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/custom_function.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_remove_batch_dim_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_avg_pool3d_backward_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/batch_norm_gather_stats.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/set_data_native.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/UndefinedTensorImpl.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h:
+
+/usr/include/c++/12/bits/atomic_base.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_chebyshev_polynomial_v_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/embedding_sparse_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/to_mkldnn_backward.h:
+
+/usr/include/c++/12/bits/hash_bytes.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_fw_primal_copy_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/reflection_pad3d_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_neg_view_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/kaiser_window_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_cholesky_ex.h:
+
+/usr/include/c++/12/bits/stl_pair.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convert_weight_to_int4pack.h:
+
+/usr/include/c++/12/array:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/all.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/multi_margin_loss_backward.h:
+
+/usr/include/c++/12/bits/localefwd.h:
+
+/usr/include/c++/12/pstl/glue_algorithm_defs.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cos_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/digamma_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/chalf_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_add_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fractional_max_pool3d_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bitwise_not_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_exp_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_batch_norm.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/logsumexp_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/batch_norm_backward_elemt_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_ldl_factor.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/unfold_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sinc_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_nearest_exact2d_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/slow_conv3d_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/record_function.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/miopen_convolution_add_relu_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/logaddexp2_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ones_like_native.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isreal_ops.h:
+
+/usr/include/c++/12/bits/memoryfwd.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/12/bits/exception_defines.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/instance_norm_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mean_ops.h:
 
 /usr/include/c++/12/tr1/exp_integral.tcc:
 
@@ -9535,6 +9903,476 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/leaky_relu_backward_native.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_inference.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/SymIntArrayRef.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/new_ones_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_copy_from_and_resize.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cufft_get_plan_cache_size.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/impl/InlineDeviceGuard.h:
+
+/usr/include/c++/12/tr1/poly_hermite.tcc:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_frac.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_add_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/minimum_meta.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mH.h:
+
+/usr/include/c++/12/ext/numeric_traits.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/tan.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/narrow_copy_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ThreadLocalState.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_chebyshev_polynomial_u.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/requires_grad_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_stack_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/one_hot_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/clamp.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cummin_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/ATenOpList.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_mm_reduce_impl_native.h:
+
+/usr/include/c++/12/bits/exception_ptr.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/digamma_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/dot.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hstack_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mkldnn_linear_backward_weights.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/Float8_e5m2.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_ctc_loss_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/DeviceGuard.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/absolute.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/Exception.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/less.h:
+
+/usr/include/limits.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/masked_select_native.h:
+
+/usr/include/c++/12/new:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/batch_norm_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_erfc_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/q_per_channel_zero_points_native.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/logit_backward_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isin_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_make_dep_token_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_max_pool2d.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cdist_backward_ops.h:
+
+/usr/include/stdint.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/typeid.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/vdot.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/amax_ops.h:
+
+/usr/include/c++/12/bits/ptr_traits.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/string_view.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/signbit_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/neg_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/utils.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/modules/linear.h:
+
+/usr/include/c++/12/bits/utility.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_shifted_chebyshev_polynomial_u_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/any_native.h:
+
+/usr/include/c++/12/bits/invoke.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/tril_indices.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_to_sparse_csc_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/autograd_not_implemented_fallback.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_select_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/embedding_bag.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_nearest1d_backward_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_dimV_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cudnn_rnn_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/put_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/batch_norm_elemt_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/unsqueeze_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/divide_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_tensorinv_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/affine_grid_generator_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/cpp_hook.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/numpy_T_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/WrapDimMinimal.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/c++/12/bits/stringfwd.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/avg_pool3d_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/reflection_pad1d_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/operator_name.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mkldnn_rnn_layer_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/new_full_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/all_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/floor_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_bsc_tensor_unsafe.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_convolution_transpose.h:
+
+/usr/include/c++/12/tr1/beta_function.tcc:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/boxing/OperatorKernel.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/amax_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_tensor_size.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/grid_sampler_2d_native.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_matrix_rank.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/less_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sparse_bsr_tensor_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/op_registration/op_allowlist.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/zero_native.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/Version.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/binary_cross_entropy_with_logits_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isneginf_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/diagonal_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sinc.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_matrix_power_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lstm_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/unsafe_split_with_sizes_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_modified_bessel_k1_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_tanh_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_test_functorch_fallback_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isneginf.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/serialize/archive.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/remainder_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/optim/sgd.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_coo_tensor_unsafe_native.h:
+
+/usr/include/pthread.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/jit/ir/named_value.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_indices_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/boxing/impl/boxing.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/ctype_base.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/nonzero_static_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_mkldnn_reshape.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/avg_pool1d.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bitwise_left_shift_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/autograd.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_linalg_slogdet_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/c++/12/functional:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lift_fresh.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/c++/12/bits/locale_classes.tcc:
+
+/usr/include/c++/12/bits/cxxabi_forced.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convert_indices_from_csr_to_coo_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/histc_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mish_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/erf_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_atan.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/rshift_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_acos.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/Metaprogramming.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/data/datasets/stateful.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/size_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/SymFloat.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_view_from_buffer.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/swapaxes_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_nearest_exact1d_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/TensorUtils.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/output_nr_native.h:
+
+/usr/include/c++/12/tr1/riemann_zeta.tcc:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_addmm.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/max_pool3d_with_indices_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_sum_backward_ops.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lift_fresh_copy.h:
+
+/usr/include/c++/12/cmath:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_validate_sparse_csr_tensor_args_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/impl/InlineStreamGuard.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_nearest_exact1d.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/data_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/input_buffer.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hspmm_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lt_ops.h:
+
+/usr/include/c++/12/bits/move.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/TensorAccessor.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/multilabel_margin_loss_forward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/ivalue_inl.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_make_per_channel_quantized_tensor_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mkldnn_linear_backward_input_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_leaf_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/transpose_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/arccosh_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_expit_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/convolution.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isinf_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_unsafe_index_put_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/C++17.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_make_per_tensor_quantized_tensor.h:
+
+/usr/include/c++/12/compare:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/float_power_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/quantize_per_channel_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mkldnn_reorder_conv2d_weight_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_matmul.h:
+
+/usr/include/c++/12/ext/alloc_traits.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/concat_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_semi_structured_linear_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_functional_sym_constrain_range_for_size.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/boxing/BoxedKernel_impl.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/record_stream_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cudnn_rnn_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_from_padded_and_nested_example_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/jit.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_select_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hardtanh_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mps_convolution_backward.h:
+
+/usr/include/c++/12/bits/stl_iterator_base_funcs.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convolution.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ge_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/max_pool2d_ops.h:
+
+/usr/include/c++/12/ios:
+
+/usr/include/c++/12/bits/stream_iterator.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/resolve_neg_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_dim_arange_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_to_dense_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/add_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/elu_backward_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_coalesced.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_xlog1py_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/argmax_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_ctc_loss.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_nearest2d.h:
+
+/usr/include/c++/12/cctype:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sym_numel_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_airy_ai_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ormqr_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/data/samplers/stream.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_values_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_cholesky.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_ifftshift_native.h:
 
@@ -9570,7 +10408,73 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_ihfft2.h:
 
-/usr/include/time.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_minimum_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_div_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/contiguous.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_signed_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_batch_norm_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/jit/runtime/operator_options.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_addmm_activation.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/diagonal_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fix.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/log_sigmoid.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/VariableHooksInterface.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_irfft_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/aminmax_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_transform_bias_rescale_qkv_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/item.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/conj_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/acos_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_sinh.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/asin_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/triangular_solve_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_softmax_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_avg_pool1d_ops.h:
+
+/usr/include/wchar.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bartlett_window_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/max_pool2d_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_scaled_dot_product_attention_math_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/subtract.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/resolve_conj_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linspace.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/Type.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/logspace_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_coo_tensor_with_dims_and_tensors.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/softplus_meta.h:
 
@@ -9590,249 +10494,21 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /usr/include/c++/12/bits/cpp_type_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/select.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/nll_loss_backward.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_tanh_ops.h:
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/optim/sgd.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/nanmedian_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_coo_tensor_unsafe_native.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/arccos_ops.h:
 
-/usr/include/pthread.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/serialize/archive.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/remainder_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hardtanh_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mps_convolution_backward.h:
-
-/usr/include/c++/12/bits/stl_iterator_base_funcs.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convolution.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/frobenius_norm_native.h:
-
-/usr/include/c++/12/bits/hashtable_policy.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mkldnn_linear_backward_weights.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/Float8_e5m2.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_ctc_loss_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/DeviceGuard.h:
+/usr/include/c++/12/cstring:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/lgamma_ops.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/nansum_ops.h:
 
 /usr/include/c++/12/cstdio:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/jit/runtime/operator_options.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_addmm_activation.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/diagonal_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fix.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_irfft_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/aminmax_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_transform_bias_rescale_qkv_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/item.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/conj_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/acos_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_sinh.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/anomaly_mode.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_test_autograd_multiple_dispatch_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/grid_sampler_3d.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_fft2_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_mask_projection_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_lstsq_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_indices.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/float_power_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/quantize_per_channel_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mkldnn_reorder_conv2d_weight_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_matmul.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/digamma_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/dot.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/minimum_meta.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cdist_forward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_functional_assert_async_ops.h:
-
-/usr/include/c++/12/algorithm:
-
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hstack_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/avg_pool3d_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/reflection_pad1d_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/operator_name.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mkldnn_rnn_layer_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/new_full_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/all_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/floor_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_bsc_tensor_unsafe.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/q_per_channel_axis_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/concat.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/squeeze.h:
-
-/usr/include/c++/12/cstdlib:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/argwhere_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/logsumexp_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/batch_norm_backward_elemt_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_ldl_factor.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/unfold_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sinc_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_nearest_exact2d_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/slow_conv3d_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/record_function.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/miopen_convolution_add_relu_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/logaddexp2_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/UndefinedTensorImpl.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/set_data_native.h:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/Type.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/logspace_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_coo_tensor_with_dims_and_tensors.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_ctc_loss_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lshift_native.h:
-
-/usr/include/c++/12/cwchar:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_mkldnn_transpose.h:
-
-/usr/include/c++/12/bits/stringfwd.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lerp_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/DeprecatedTypePropertiesRegistry.h:
-
-/usr/include/c++/12/bits/algorithmfwd.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/gru_cell.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/List_inl.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_transform_bias_rescale_qkv.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/impl/HermeticPyObjectTLS.h:
-
-/home/heaven/Desktop/doc/Linear_Algebra/test_files/test.cpp:
-
-/usr/include/c++/12/bits/alloc_traits.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/convolution_backward.h:
-
-/usr/include/stdio.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_batch_norm_impl_index.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_to_cpu_ops.h:
-
-/usr/include/c++/12/tuple:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/BFloat16-inl.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/function_schema_inl.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bitwise_or_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/diag_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sinh_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/autograd.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_linalg_slogdet_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/softplus_native.h:
-
-/usr/include/c++/12/bits/stl_set.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/acosh_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/signbit_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/neg_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/utils.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/modules/linear.h:
-
-/usr/include/c++/12/bits/utility.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/triangular_solve_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mm_ops.h:
-
-/usr/include/c++/12/bits/stl_iterator.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/align_as_ops.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_mkldnn_transpose_native.h:
 
@@ -9841,6 +10517,10 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 /home/heaven/Desktop/doc/libtorch/include/c10/util/either.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/ivalue_to.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_test_autograd_multiple_dispatch_view.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/sin_native.h:
 
@@ -9852,19 +10532,189 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /usr/include/locale.h:
 
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/triangular_solve_native.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cudnn_rnn_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mm_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_from_padded_and_nested_example_ops.h:
+/usr/include/c++/12/bits/stl_iterator.h:
 
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/jit.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/align_as_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_select_backward_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/trace_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mean_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_transform_bias_rescale_qkv_ops.h:
+
+/usr/include/c++/12/bits/locale_facets.tcc:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/optim/optimizer.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_weight_int4pack_mm_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/Dict.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_select_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_masked_softmax_backward.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/copysign_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_floor_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/jit/frontend/source_range.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_new_zeros_with_same_feature_meta.h:
+
+/usr/include/c++/12/bits/stl_deque.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_unsafe_view.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/NamedTensorUtils.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_softmax.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_tanh_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/q_per_channel_scales_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/rad2deg_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_ifft2.h:
+
+/usr/include/c++/12/memory:
+
+/usr/include/c++/12/bits/std_abs.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_erf_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/boxing/impl/WrapFunctionIntoFunctor.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_fftn.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_ifftn_native.h:
+
+/usr/include/c++/12/bits/char_traits.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/TypeTraits.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/diff.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/norm_meta.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/qscheme_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/function.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_new_zeros_with_same_feature_meta_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/DeprecatedTypeProperties.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/infinitely_differentiable_gelu_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_det_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_softmax_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/gelu.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_values_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/smm_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/copy.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_values_copy_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/to_ops.h:
+
+/usr/include/c++/12/bits/ostream_insert.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/row_indices_copy_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/take.h:
+
+/usr/include/endian.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/StorageImpl.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_max_pool3d_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/feature_dropout_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/conv_tbc.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sum_ops.h:
+
+/usr/include/c++/12/debug/debug.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/Export.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_grid_sampler.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/functional/normalization.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/c++/12/bits/shared_ptr_base.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_thnn_differentiable_lstm_cell_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_has_compatible_shallow_copy_type_ops.h:
+
+/usr/include/c++/12/bits/new_allocator.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bilinear_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_linalg_check_errors_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_inference_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/asin_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hardshrink_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/qint8.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_ifft_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/grad_mode.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_shape_as_tensor.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_reciprocal_ops.h:
 
 /usr/include/c++/12/bits/std_function.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_masked_scale.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/tanh_backward_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sparse_compressed_tensor_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ones_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/avg_pool3d.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/multilabel_margin_loss_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_spdiags_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/UniqueVoidPtr.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_test_autograd_multiple_dispatch_ops.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/sparse_bsr_tensor_native.h:
 
@@ -9898,688 +10748,6 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/binary_cross_entropy_backward_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_affine_grid_generator_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/std_ops.h:
-
-/usr/include/c++/12/bits/stl_pair.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isreal_ops.h:
-
-/usr/include/c++/12/bits/memoryfwd.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/pad_sequence_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/svd_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_affine_grid_generator_backward_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/custom_class.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_pad_packed_sequence_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_amp_foreach_non_finite_check_and_unscale_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ne_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_distributed.h:
-
-/usr/include/c++/12/bits/predefined_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/matmul_backward.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/boxing/BoxedKernel_impl.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/record_stream_ops.h:
-
-/usr/include/c++/12/cstdint:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fbgemm_linear_int8_weight_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/impl/PythonDispatcherTLS.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/vander_native.h:
-
-/usr/include/c++/12/bits/node_handle.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mode_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cast_Double_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_nearest1d_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/DeviceType.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/replication_pad1d_native.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/broadcast_tensors.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_unsafe_index_put_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/resolve_neg_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_dim_arange_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_to_dense_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/add_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/elu_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_coalesced.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sparse_dim_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_tensor_size_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/numpy_T.h:
-
-/usr/include/c++/12/stdexcept:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_efficientzerotensor.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/clip_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/arccosh_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/igamma.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_xlog1py_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/argmax_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_ctc_loss.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_nearest2d.h:
-
-/usr/include/c++/12/cctype:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sym_numel_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_airy_ai_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ormqr_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/data/samplers/stream.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_values_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_cholesky.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/data_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/input_buffer.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/gather_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/libintl.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/reflection_pad1d_backward_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/rand_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_mkldnn_transpose_ops.h:
-
-/usr/include/c++/12/bits/std_mutex.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_set_to_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_validate_sparse_csr_tensor_args_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/impl/InlineStreamGuard.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_nearest_exact1d.h:
-
-/usr/include/c++/12/cmath:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/jit/frontend/function_schema_parser.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fbgemm_pack_gemm_matrix_fp16_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_bicubic2d_aa_backward_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/avg_pool2d.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_softmax.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/NamedTensorUtils.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_unsafe_view.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/exp_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_validate_sparse_compressed_tensor_args_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/multilabel_margin_loss_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_spdiags_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/UniqueVoidPtr.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_test_autograd_multiple_dispatch_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_masked_scale.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/tanh_backward_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sparse_compressed_tensor_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ones_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/avg_pool3d.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/Formatting.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/angle_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_tensor_strides_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/unsafe_split_with_sizes_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_modified_bessel_k1_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_tanh_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_test_functorch_fallback_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isneginf.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/jit/ir/named_value.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_indices_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sparse_bsr_tensor_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/op_registration/op_allowlist.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/zero_native.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/Version.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/binary_cross_entropy_with_logits_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isneginf_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/diagonal_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sinc.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_matrix_power_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lstm_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/jit/frontend/source_range.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_new_zeros_with_same_feature_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_trilinear3d_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_rfftn_native.h:
-
-/usr/include/c++/12/bits/basic_string.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/grid_sampler_3d_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/variable.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_euclidean_dist_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_empty_affine_quantized.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/roll_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/matrix_H_ops.h:
-
-/usr/include/c++/12/unordered_set:
-
-/usr/include/c++/12/cstddef:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/miopen_rnn_backward.h:
-
-/usr/include/c++/12/type_traits:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/empty_permuted.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/blackman_window.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/im2col.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/Context.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/matrix_power_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/MemoryFormat.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/boxing/OperatorKernel.h:
-
-/usr/include/c++/12/tr1/beta_function.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/amax_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_tensor_size.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_has_compatible_shallow_copy_type_ops.h:
-
-/usr/include/c++/12/bits/new_allocator.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bilinear_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/functional/pixelshuffle.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_embedding_bag_sparse_backward_native.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sum_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_mul.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ones_like_native.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/elu_backward_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/empty_like_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/record_stream.h:
-
-/usr/include/c++/12/bits/stl_vector.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/ivalue.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/tan.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/narrow_copy_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ThreadLocalState.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_chebyshev_polynomial_u.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/requires_grad_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_stack_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/one_hot_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/clamp.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/VariableHooksInterface.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/log_sigmoid.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_mm_reduce_impl_native.h:
-
-/usr/include/c++/12/bits/exception_ptr.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cummin_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/ATenOpList.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/native_layer_norm_backward_native.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/nll_loss_nd_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/custom_function.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_remove_batch_dim_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_avg_pool3d_backward_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/batch_norm_gather_stats.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/functional/batchnorm.h:
-
-/usr/include/c++/12/tr1/bessel_function.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isneginf_native.h:
-
-/usr/include/c++/12/bits/shared_ptr.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/function.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_new_zeros_with_same_feature_meta_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/DeprecatedTypeProperties.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/infinitely_differentiable_gelu_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_det_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_softmax_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/gelu.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/qscheme_ops.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/TensorAccessor.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/multilabel_margin_loss_forward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/ivalue_inl.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_make_per_channel_quantized_tensor_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/affine_grid_generator_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/cpp_hook.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/numpy_T_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_lstm_mps_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/Float8_e4m3fnuz.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/WrapDimMinimal.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/rad2deg_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_ifft2.h:
-
-/usr/include/c++/12/memory:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_autocast_to_full_precision_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/trace_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_transform_bias_rescale_qkv_ops.h:
-
-/usr/include/c++/12/bits/locale_facets.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/optim/optimizer.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_weight_int4pack_mm_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/Dict.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_select_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_masked_softmax_backward.h:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/copysign_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_floor_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fractional_max_pool2d_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convolution_double_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_pdist_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/quantized_batch_norm.h:
-
-/usr/include/c++/12/bits/stl_heap.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hspmm_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lt_ops.h:
-
-/usr/include/c++/12/bits/move.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/macros/cmake_macros.h:
-
-/usr/include/c++/12/tr1/poly_laguerre.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_cos_ops.h:
-
-/usr/include/c++/12/bits/ostream_insert.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_debug_has_internal_overlap_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/q_scale.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/istft_ops.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_index_put_impl.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_ldl_solve.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/boxing/impl/boxing.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bitwise_left_shift_ops.h:
-
-/usr/include/x86_64-linux-gnu/c++/12/bits/ctype_base.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/nonzero_static_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_mkldnn_reshape.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/avg_pool1d.h:
-
-/usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h:
-
-/usr/include/c++/12/bits/atomic_base.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_chebyshev_polynomial_v_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/embedding_sparse_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/native_norm_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_choose_qparams_per_tensor_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/clamp_max_ops.h:
-
-/usr/include/c++/12/bits/stl_iterator_base_types.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_linalg_check_errors_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_inference_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/asin_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hardshrink_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/qint8.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/row_indices_copy_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/take.h:
-
-/usr/include/endian.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/StorageImpl.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/size_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/t_ops.h:
-
-/usr/include/linux/errno.h:
-
-/usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/SymFloat.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_view_from_buffer.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/swapaxes_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_nearest_exact1d_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/xlogy_ops.h:
-
-/usr/include/c++/12/ext/type_traits.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/scatter_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_segment_reduce_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/sum_ops.h:
-
-/usr/include/c++/12/debug/debug.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/Export.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_grid_sampler.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_max_pool3d_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/feature_dropout_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/conv_tbc.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_erfc_ops.h:
-
-/usr/include/limits.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/masked_select_native.h:
-
-/usr/include/c++/12/new:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/batch_norm_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/Exception.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/less.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_select_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/autograd_not_implemented_fallback.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/row_stack_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/Tensor.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_version_ops.h:
-
-/usr/include/c++/12/tr1/gamma.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/accumulate.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/elu_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/absolute.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/to_mkldnn_backward.h:
-
-/usr/include/c++/12/bits/hash_bytes.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_fw_primal_copy_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/reflection_pad3d_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_neg_view_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/kaiser_window_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_cholesky_ex.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/native_batch_norm_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/ger_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_copy_from_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/triu_ops.h:
-
-/usr/include/c++/12/bits/streambuf_iterator.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/Allocator.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/maximum_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mkldnn_linear_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_reshape_from_tensor.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_empty_affine_quantized_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/huber_loss_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_ifft_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/grad_mode.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_shape_as_tensor.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_reciprocal_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/embedding_bag.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_nearest1d_backward_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_dimV_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cudnn_rnn_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/put_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/batch_norm_elemt_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/unsqueeze_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/divide_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_tensorinv_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/include/c++/12/functional:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lift_fresh.h:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/c++/12/bits/locale_classes.tcc:
-
-/usr/include/c++/12/bits/cxxabi_forced.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convert_indices_from_csr_to_coo_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/histc_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mish_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/erf_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_atan.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/rshift_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_acos.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/Metaprogramming.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/data/datasets/stateful.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h:
-
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/xlogy_native.h:
 
 /usr/include/stdc-predef.h:
@@ -10592,33 +10760,11 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /usr/include/c++/12/vector:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/mH.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/Context.h:
 
-/usr/include/c++/12/ext/numeric_traits.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/matrix_power_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_add_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/asin_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/triangular_solve_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_softmax_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_avg_pool1d_ops.h:
-
-/usr/include/wchar.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bartlett_window_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/max_pool2d_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_scaled_dot_product_attention_math_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/subtract.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/resolve_conj_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linspace.h:
+/home/heaven/Desktop/doc/libtorch/include/c10/core/MemoryFormat.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/new_empty_ops.h:
 
@@ -10646,139 +10792,33 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/feature_dropout_ops.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/cos_native.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/diagonal_backward_ops.h:
 
 /usr/include/c++/12/bits/range_access.h:
 
-/usr/include/c++/12/bits/stl_uninitialized.h:
+/usr/include/c++/12/bits/stl_iterator_base_types.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convert_weight_to_int4pack.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/native_norm_native.h:
 
-/usr/include/c++/12/array:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_choose_qparams_per_tensor_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_make_per_tensor_quantized_tensor.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/clamp_max_ops.h:
 
-/usr/include/c++/12/compare:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/upsample_nearest2d_meta.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cslt_sparse_mm_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/select_scatter.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/select_scatter_ops.h:
+/usr/include/c++/12/pstl/execution_defs.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_copy_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_scaled_modified_bessel_k1_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/floor_divide_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_euclidean_dist.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/trunc.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/max_pool2d_with_indices_backward.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/and_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/torch.h:
-
-/usr/include/c++/12/bits/unordered_map.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_add_batch_dim.h:
-
-/usr/include/c++/12/ext/aligned_buffer.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/dequantize_ops.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/c++/12/tr1/modified_bessel_func.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_reshape_alias_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/repeat_interleave_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_pin_memory_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/avg_pool3d_backward_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_fft_r2c_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_is_acceptable_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/index_add_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fractional_max_pool3d_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bitwise_not_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_exp_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_batch_norm.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/chalf_ops.h:
-
-/usr/include/c++/12/cstring:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/arccos_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_ifftn_native.h:
-
-/usr/include/c++/12/bits/char_traits.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/TypeTraits.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/diff.h:
-
-/usr/include/c++/12/bits/std_abs.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_erf_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/boxing/impl/WrapFunctionIntoFunctor.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_fftn.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_test_autograd_multiple_dispatch_view.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/core/ivalue_to.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_lerp_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/huber_loss_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/autograd.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_solve_triangular.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/Float8_e4m3fn.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_tanh.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/new_ones_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/SymIntArrayRef.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/abs_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/native_layer_norm_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/atanh_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/aminmax_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/take_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/square_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/norm_meta.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/replication_pad1d_backward_ops.h:
-
-/usr/include/c++/12/bits/unique_ptr.h:
-
-/usr/include/strings.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_lstsq.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/argsort_ops.h:
 
@@ -10786,33 +10826,129 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /usr/include/c++/12/ctime:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_values_native.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/std_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/smm_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_affine_grid_generator_ops.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/copy.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_thnn_fused_lstm_cell_backward_impl_native.h:
 
-/usr/include/c++/12/bits/exception_defines.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/meshgrid.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/instance_norm_ops.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/empty_quantized.h:
 
-/usr/include/alloca.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/replication_pad1d_backward_ops.h:
 
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+/usr/include/strings.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_convolution_transpose.h:
+/usr/include/c++/12/bits/unique_ptr.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convolution_double_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fractional_max_pool2d_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/core/List_inl.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_transform_bias_rescale_qkv.h:
+
+/home/heaven/Desktop/doc/Linear_Algebra/test_files/test.cpp:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/impl/HermeticPyObjectTLS.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/functional/upsampling.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_nearest_exact3d.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/pad_sequence.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/hash.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_floating_point_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_prelu_kernel_native.h:
+
+/usr/include/c++/12/ext/concurrence.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hardshrink_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/core/DispatchKey.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/anomaly_mode.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_test_autograd_multiple_dispatch_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/grid_sampler_3d.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_fft2_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_mask_projection_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_lstsq_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_indices.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h:
+
+/usr/include/linux/errno.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/t_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/Float8_e4m3fnuz.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_lstm_mps_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/clip_native.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/igamma.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/arccosh_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/column_stack_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/functional/batchnorm.h:
+
+/usr/include/c++/12/tr1/bessel_function.tcc:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isneginf_native.h:
+
+/usr/include/c++/12/bits/shared_ptr.h:
+
+/home/heaven/Desktop/doc/libtorch/include/torch/csrc/autograd/grad_mode.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/sparse_sampled_addmm_native.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/sym_numel_ops.h:
 
-/usr/include/linux/limits.h:
-
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_avg_pool3d_backward_ops.h:
+
+/usr/include/linux/limits.h:
 
 /usr/include/c++/12/bits/shared_ptr_atomic.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h:
+
+/usr/include/c++/12/tr1/legendre_function.tcc:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/diagonal_copy_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_avg_pool3d_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/asinh_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hardshrink_backward_meta.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/randn_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_scaled_dot_product_flash_attention_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/einsum_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convolution_mode.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/softplus_backward.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bitwise_and_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/c10/util/bit_cast.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/core/class_type.h:
 
@@ -10891,142 +11027,6 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/sparse_mask_ops.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/batch_norm_gather_stats_ops.h:
-
-/usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/lift_fresh_copy.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/nll_loss_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/nanmedian_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_sum_backward.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include/torch/nn/modules/pooling.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_upsample_nearest_exact1d_backward_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_log_softmax_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cosh_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_convolution_mode.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/einsum_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/q_per_channel_zero_points_native.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/logit_backward_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/isin_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_make_dep_token_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_max_pool2d.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cdist_backward_ops.h:
-
-/usr/include/stdint.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/typeid.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/vdot.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/amax_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_values_copy_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/to_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_minimum_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_div_ops.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/contiguous.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/is_signed_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/cudnn_batch_norm_backward.h:
-
-/usr/include/c++/12/bits/locale_conv.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_svd.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/nanmedian_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_modified_bessel_k0_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/split_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bernoulli_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/embedding_bag_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/TypeIndex.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cudnn_rnn.h:
-
-/usr/include/c++/12/ext/alloc_traits.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/concat_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_sparse_semi_structured_linear_native.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_functional_sym_constrain_range_for_size.h:
-
-/usr/include/c++/12/tr1/ell_integral.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fake_quantize_per_tensor_affine_ops.h:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/fft_ifft2_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/linalg_lu_factor_ex.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/adaptive_avg_pool3d_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/asinh_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/hardshrink_backward_meta.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/randn_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_scaled_dot_product_flash_attention_backward.h:
-
-/usr/include/c++/12/tr1/legendre_function.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/diagonal_copy_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_copy_from_and_resize.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/softplus_backward.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/util/bit_cast.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/bitwise_and_ops.h:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_cufft_get_plan_cache_size.h:
-
-/home/heaven/Desktop/doc/libtorch/include/c10/core/impl/InlineDeviceGuard.h:
-
-/usr/include/c++/12/tr1/poly_hermite.tcc:
-
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_frac.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_embedding_bag_native.h:
 
@@ -11176,11 +11176,11 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/bitwise_xor_ops.h:
 
-/usr/include/c++/12/bits/streambuf.tcc:
-
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/kthvalue_native.h:
 
 /usr/include/c++/12/bits/stl_bvector.h:
+
+/usr/include/c++/12/bits/streambuf.tcc:
 
 /home/heaven/Desktop/doc/libtorch/include/c10/core/SymNodeImpl.h:
 
@@ -11598,6 +11598,8 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/cholesky_solve_ops.h:
 
+/usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h:
+
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/rrelu_with_noise_ops.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/tril_ops.h:
@@ -11605,8 +11607,6 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nnpack_available_ops.h:
-
-/usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/glu_backward_native.h:
 
@@ -11702,9 +11702,9 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/sort.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/heaviside.h:
-
 /usr/include/c++/12/bits/basic_ios.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/heaviside.h:
 
 /usr/include/c++/12/condition_variable:
 
@@ -11726,15 +11726,15 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/col_indices_ops.h:
 
-/usr/include/c++/12/bits/postypes.h:
-
-/usr/include/c++/12/bits/parse_numbers.h:
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_maximum.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/hypot.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_maximum.h:
+/usr/include/c++/12/bits/parse_numbers.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/corrcoef_ops.h:
+
+/usr/include/c++/12/bits/postypes.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/special_logit.h:
 
@@ -11992,9 +11992,9 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_cosh.h:
 
-/home/heaven/Desktop/doc/libtorch/include/ATen/ops/choose_qparams_optimized_ops.h:
-
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/rad2deg_ops.h:
+
+/home/heaven/Desktop/doc/libtorch/include/ATen/ops/choose_qparams_optimized_ops.h:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_div.h:
 
@@ -13404,9 +13404,9 @@ CMakeFiles/test.dir/test.cpp.o: /home/heaven/Desktop/doc/Linear_Algebra/test_fil
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_foreach_log1p_native.h:
 
-/usr/include/c++/12/iterator:
-
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/_nested_from_padded_ops.h:
+
+/usr/include/c++/12/iterator:
 
 /home/heaven/Desktop/doc/libtorch/include/ATen/ops/batch_norm_gather_stats_with_counts.h:
 

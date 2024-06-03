@@ -84,12 +84,33 @@ int main(void)
     int times = 0;
     double g_E = 5.0;  //随便给个值
     double energy_error = 0.0;
+    int j = 0;
     /*中转矩阵U、S、VH*/
     torch::Tensor U = torch::zeros({D*d,D*d}, torch::kComplexDouble);
     torch::Tensor S = torch::zeros({D*d}, torch::kDouble);
     torch::Tensor VH = torch::zeros({D*d,D*d}, torch::kComplexDouble);
     torch::Tensor M = torch::zeros({D*d,D*d}, torch::kComplexDouble);
+    
+    do{
+        times += 1;
+        /*奇数*/
+        for(int i=1; i<L; i++,i++){
+            auto K = torch::einsum("abj,j,jcd->abcd",{A[i],Gamma[i],A[(i+1)%L]});
+            M = torch::einsum("ab,cbd->cad",{h,K.reshape({D,d*d,D})}).reshape({D*d,d*D});
+            std::tie(U, S, VH) = torch::linalg_svd(M, true);
 
+            A[i] = U.slice(1,0,D).clone().view({D,d,D}).contiguous();
+            Gamma[i] = S.slice(0,0,D).clone();
+            A[(i+1)%L] = VH.slice(0,0,D).clone().view({D,d,D}).contiguous();
+            
+            torch::Tensor E = torch::norm(Gamma[i],2);
+            Gamma[i] = Gamma[i]/E.item<double>();
+            energy_error = std::abs(g_E-E.item<double>());
+            g_E = E.item<double>();
+        }
+        /*偶数*/
+
+    }while(energy_error > jz);
 
     std::cout << "times is :" << times << std::endl;
     std::cout << "the ground energy is:" << g_E << std::endl;

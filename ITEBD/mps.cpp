@@ -9,7 +9,7 @@ void updatemps();
 int main(void)
 {
     /*the number that recognizes as zero*/
-    const double jz = 1e-20;
+    const double jz = 1e-25;
     // 参数
     const int L = 4;    // 粒子数，本程序仅适用于偶数
     const double s = 1.0;   //tips: not 1/2, but 1.0/2
@@ -95,7 +95,7 @@ int main(void)
         /*奇数*/
         for(int i=0; i<L; i++,i++){
             auto K = torch::einsum("abj,j,jcd->abcd",{A[i],Gamma[i],A[i+1]});
-            M = K.view({D*d,d*D}).contiguous();
+            M = torch::einsum("ab,cbd->cad",{h,K.reshape({D,d*d,D})}).reshape({D*d,d*D});
             std::tie(U, S, VH) = torch::linalg_svd(M, true);
 
             A[i] = U.slice(1,0,D).clone().view({D,d,D}).contiguous();
@@ -103,27 +103,28 @@ int main(void)
             A[i+1] = VH.slice(0,0,D).clone().view({D,d,D}).contiguous();
             
             torch::Tensor E = torch::norm(Gamma[i],2);
+            Gamma[i] = Gamma[i]/E.item<double>();
             energy_error = std::abs(g_E-E.item<double>());
             g_E = E.item<double>();
         }
         /*偶数*/
         for(int i=1; i<L; i++,i++){
             auto K = torch::einsum("abj,j,jcd->abcd",{A[i],Gamma[i],A[(i+1)%L]});
-            M = K.view({D*d,d*D}).contiguous();
+            M = torch::einsum("ab,cbd->cad",{h,K.reshape({D,d*d,D})}).reshape({D*d,d*D});
             std::tie(U, S, VH) = torch::linalg_svd(M, true);
 
             A[i] = U.slice(1,0,D).clone().view({D,d,D}).contiguous();
             Gamma[i] = S.slice(0,0,D).clone();
-            A[i+1] = VH.slice(0,0,D).clone().view({D,d,D}).contiguous();
+            A[(i+1)%L] = VH.slice(0,0,D).clone().view({D,d,D}).contiguous();
             
             torch::Tensor E = torch::norm(Gamma[i],2);
+            Gamma[i] = Gamma[i]/E.item<double>();
             energy_error = std::abs(g_E-E.item<double>());
             g_E = E.item<double>();
         }
+    }while(energy_error > jz);
 
-
-    }while(energy_error > jz*1e10);
-
+    g_E = -g_E;
     std::cout << "times is :" << times << std::endl;
     std::cout << "the ground energy is:" << g_E << std::endl;
 
