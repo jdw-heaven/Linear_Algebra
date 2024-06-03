@@ -1,0 +1,3 @@
+/home/heaven/Desktop/doc/Linear_Algebra/ITEBD/build/CMakeFiles/mps.dir
+/home/heaven/Desktop/doc/Linear_Algebra/ITEBD/build/CMakeFiles/edit_cache.dir
+/home/heaven/Desktop/doc/Linear_Algebra/ITEBD/build/CMakeFiles/rebuild_cache.dir
