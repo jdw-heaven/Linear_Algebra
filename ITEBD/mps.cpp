@@ -4,15 +4,13 @@
 #include <complex>
 #include <torch/torch.h>
 
-void updatemps();
-
 int main(void)
 {
     /*the number that recognizes as zero*/
     const double jz = 1e-25;
     // 参数
     const int L = 4;    // 粒子数，本程序仅适用于偶数
-    const double s = 1.0;   //tips: not 1/2, but 1.0/2
+    const double s = 3.0/2;   //tips: not 1/2, but 1.0/2
     const int D = 4;    // hilbert子空间维数
     const double tau = 0.01;    // 单位虚时
 
@@ -54,18 +52,10 @@ int main(void)
     // std::cout << real(h) << std::endl;
     // std::cout << imag(h) << std::endl;
 
-    // 虚时演化算符,仍然用h表示
-    for(int i=0; i<d*d; i++){
-        for(int j=0; j<d*d; j++){
-            if(std::abs(real(h[i][j]).item<double>())>jz){
-                real(h[i][j]) = torch::exp(-tau*real(h[i][j]));
-            }else{
-                ;
-            }
-        }
-    }
-    // std::cout << real(h) << std::endl;
-    // std::cout << imag(h) << std::endl;
+    // 虚时演化算符
+    torch::Tensor ite = torch::matrix_exp(-tau*h);
+    // std::cout << real(ite) << std::endl;
+    // std::cout << imag(ite) << std::endl;
 
     // 随机生成周期性MPS
     std::vector<torch::Tensor> A;
@@ -82,8 +72,10 @@ int main(void)
 
     // 进行虚时演化迭代，奇偶交替
     int times = 0;
-    double g_E = 5.0;  //随便给个值
+    double g_E = 0.0;  //随便给个值
+    double g_Ep = -1.0;
     double energy_error = 0.0;
+    int j = 0;
     /*中转矩阵U、S、VH*/
     torch::Tensor U = torch::zeros({D*d,D*d}, torch::kComplexDouble);
     torch::Tensor S = torch::zeros({D*d}, torch::kDouble);
@@ -92,43 +84,55 @@ int main(void)
     
     do{
         times += 1;
+        g_E = 0.0;
         /*奇数*/
         for(int i=0; i<L; i++,i++){
+            j = i-1;
+            if(i==0) j = L-1;
+            A[i] = torch::einsum("a,abc->abc",{Gamma[j],A[i]});
+            A[i+1] = torch::einsum("abc,c->abc",{A[i+1],Gamma[i+1]});
             auto K = torch::einsum("abj,j,jcd->abcd",{A[i],Gamma[i],A[i+1]});
-            M = torch::einsum("ab,cbd->cad",{h,K.reshape({D,d*d,D})}).reshape({D*d,d*D});
+            M = torch::einsum("ab,cbd->cad",{ite,K.reshape({D,d*d,D})}).reshape({D*d,d*D});
             std::tie(U, S, VH) = torch::linalg_svd(M, true);
 
-            A[i] = U.slice(1,0,D).clone().view({D,d,D}).contiguous();
+            A[i] = U.slice(1,0,D).clone().reshape({D,d,D});
+            A[i] = torch::einsum("a,abc->abc",{torch::reciprocal(Gamma[j]),A[i]});
             Gamma[i] = S.slice(0,0,D).clone();
-            A[i+1] = VH.slice(0,0,D).clone().view({D,d,D}).contiguous();
+            A[i+1] = VH.slice(0,0,D).clone().reshape({D,d,D});
+            A[i+1] = torch::einsum("abc,c->abc",{A[i+1],torch::reciprocal(Gamma[i+1])});
             
-            torch::Tensor E = torch::norm(Gamma[i],2);
+            torch::Tensor E = torch::norm(S,2);
             Gamma[i] = Gamma[i]/E.item<double>();
-            energy_error = std::abs(g_E-E.item<double>());
-            g_E = E.item<double>();
+            Gamma[i] = Gamma[i]/torch::norm(Gamma[i]).item<double>();
+            g_E += std::log(E.item<double>())/(-tau);
         }
         /*偶数*/
         for(int i=1; i<L; i++,i++){
+            A[i] = torch::einsum("a,abc->abc",{Gamma[i-1],A[i]});
+            A[(i+1)%L] = torch::einsum("abc,c->abc",{A[(i+1)%L],Gamma[(i+1)%L]});
             auto K = torch::einsum("abj,j,jcd->abcd",{A[i],Gamma[i],A[(i+1)%L]});
-            M = torch::einsum("ab,cbd->cad",{h,K.reshape({D,d*d,D})}).reshape({D*d,d*D});
+            M = torch::einsum("ab,cbd->cad",{ite,K.reshape({D,d*d,D})}).reshape({D*d,d*D});
             std::tie(U, S, VH) = torch::linalg_svd(M, true);
 
-            A[i] = U.slice(1,0,D).clone().view({D,d,D}).contiguous();
+            A[i] = U.slice(1,0,D).clone().reshape({D,d,D});
+            A[i] = torch::einsum("a,abc->abc",{torch::reciprocal(Gamma[i-1]),A[i]});
             Gamma[i] = S.slice(0,0,D).clone();
-            A[(i+1)%L] = VH.slice(0,0,D).clone().view({D,d,D}).contiguous();
-            
-            torch::Tensor E = torch::norm(Gamma[i],2);
+            A[(i+1)%L] = VH.slice(0,0,D).clone().reshape({D,d,D});
+            A[(i+1)%L] = torch::einsum("abc,c->abc",{A[(i+1)%L],torch::reciprocal(Gamma[(i+1)%L])});
+
+
+            torch::Tensor E = torch::norm(S,2);
             Gamma[i] = Gamma[i]/E.item<double>();
-            energy_error = std::abs(g_E-E.item<double>());
-            g_E = E.item<double>();
+            Gamma[i] = Gamma[i]/torch::norm(Gamma[i]).item<double>();
+            g_E += std::log(E.item<double>())/(-tau);
         }
+        g_E = g_E/L;
+        energy_error = std::abs(g_E-g_Ep);
+        g_Ep = g_E;
     }while(energy_error > jz);
 
-    g_E = -g_E;
     std::cout << "times is :" << times << std::endl;
     std::cout << "the ground energy is:" << g_E << std::endl;
-
-
 
     return 0;
 }

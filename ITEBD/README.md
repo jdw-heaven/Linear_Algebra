@@ -57,8 +57,7 @@ $\mathbf{x} = e^{-\beta H}\mathbf{x_{0}} = c_{1}e^{-\beta \lambda_{1}}\nu_{1} + 
 
 基于奇异值分解我们可以将系统的状态用多个矩阵乘积的形式表示[^1]：
 
-[^1]: Schollwöck, U. (2011). The density-matrix renormalization group in the age of matrix product states. Annals of Physics, 326(1), 96–192. https://doi.org/10.1016/j.aop.2010.09.012
-[pdf](article/1008.3477v2.pdf)
+[^1]: Schollwöck, U. (2011). The density-matrix renormalization group in the age of matrix product states. Annals of Physics, 326(1), 96–192. https://doi.org/10.1016/j.aop.2010.09.012 [pdf](article/1008.3477v2.pdf)
 
 > SVD guarantees for an arbitrary (rectangular) matrix \( M \) of dimensions \( (N_A \times N_B) \) the existence of a decomposition:
 >
@@ -184,7 +183,7 @@ $\mathbf{x} = e^{-\beta H}\mathbf{x_{0}} = c_{1}e^{-\beta \lambda_{1}}\nu_{1} + 
 
 \( \mathbf{S^{\pm }} \ket{j, m} = \sqrt{(j\mp m)(j \pm m +1)} \ket{j,m \pm 1} \)
 
-由于虚时演化算符是$\exp (-\tau h_{i})$，因此，虚时演化算符对应的矩阵就是$h_{i}$对应非零元素加系数$-\tau $并取e指数。
+由于虚时演化算符是$\exp (-\tau h_{i})$，因此，虚时演化算符对应的矩阵可以使用torch::matrix_exp来计算，这是专门用来计算矩阵指数的函数；当然，当$\tau$比较小的时候，也可以用$I-\tau h_{i}$来近似。
 
 采用直乘的算法即可。
 
@@ -199,3 +198,52 @@ $\mathbf{x} = e^{-\beta H}\mathbf{x_{0}} = c_{1}e^{-\beta \lambda_{1}}\nu_{1} + 
 将哈密顿量作用在MPS上并更新奇异值，这里需要注意，我们将用Hilbert子空间进行近似，因此只取前D向最大的；libtorch内置的svd奇异值的排序也正是descending的。
 
 技术细节见代码；我们取偶数个粒子。
+
+##### 6. 改进
+
+计算过程中发现数值稳定性不是很好，可能是$\tau$对于相应的精度来说太大了。
+
+由于改变$\tau$就需要改变相应的哈密顿量对应的矩阵，因此，我们可以适当根据循环次数调整$\tau$的值。
+
+##### 7. 总结
+
+写这个程序还是很不容易的，特别是更新MPS那一块。
+
+主要的步骤是来自文献[^2]的流程图：
+
+<figure>
+    <img src="pic/Inf_fig3.png" alt="In order to update the MPS after gate **U** has been applied, see Fig. (\ref{fig:evolution}), we first contract the tensor network (i) into a single tensor **Θ_{α i j γ}**(ii). We then compute the **singular value decomposition** of **Θ** according to the index bipartition [α i]:[jγ], namely **Θ = ∑_{β} X_{[α i]β} λ^A_β Y_{β[j γ]}** as in (iii). We introduce **λ^B** back into the network (iv) and form tensors **Γ^A** and **Γ^[B]** in (iv) by attaching to **X** and **Y** the inverse of the Schmidt coefficients **λ^B**. All such matrix manipulations are achieved with **O(d^2χ^2)** space and **O(d^3χ^3)** and need to be performed only once in order to update the MPS for the whole infinite chain.">
+    <figcaption>Fig.update</figcaption>
+</figure>
+
+In order to update the MPS after gate $U$ has been applied, see Fig.update, we first contract the tensor network ($i$) into a single tensor $\Theta_{\alpha i j \gamma}$ ($ii$). We then compute the *singular value decomposition* of $\Theta$ according to the index bipartition $[\alpha i]:[j\gamma]$, namely $\Theta = \sum_{\beta} X_{[\alpha i]\beta}\tilde{\lambda}^{A}_\beta Y_{\beta[j \gamma]}$ as in($iii$). We introduce $\lambda^B$ back into the network ($iv$) and form tensors $\tilde{\Gamma}^{A}$ and $\tilde{\Gamma}^{[B]}$ in($iv$) by attaching to $X$ and $Y$ the inverse of the Schmidt coefficients $\lambda^{B}$. All such matrix manipulations are achieved with $O(d^2\chi^2)$ space and $O(d^3\chi^3)$ and need to be performed only once in order to update the MPS for the whole infinite chain.
+
+[^2]: Vidal, G. (2007). Classical Simulation of Infinite-Size Quantum Lattice Systems in One Spatial Dimension. Physical Review Letters, 98(7), 070201. doi:10.1103/physrevlett.98.070201 [pdf](article/0605597v2.pdf)
+
+# 结果
+
+通过改变一下参数，我们可以的到基态能量。（波函数就把MPS乘起来就好，这里就不给出了）
+
+- [x] 周期（或者粒子个数）L（本程序仅适用于偶数）
+- [x] 粒子的自旋量子数 s
+- [x] 矩阵非物理指标的维数 D
+- [x] 单位虚时 $\tau$
+
+算法的数值稳定性是非常不错的；至于与学长给的参考值有细微差别，原因在于对奇异值的归一化的方式上。学长应该是截断后在计算二范数，但我认为时间演化算符作用后的归一化系数应该是一个整体，归一化系数不应该只是截断后的。
+把“torch::Tensor E = torch::norm(S,2);”中“S”改为“Gamma[i]”就可以得到和学长一样的结果。两个结果相差不大。
+
+```Cpp
+    torch::Tensor E = torch::norm(S,2);
+    Gamma[i] = Gamma[i]/E.item<double>();
+    Gamma[i] = Gamma[i]/torch::norm(Gamma[i]).item<double>();
+    g_E += std::log(E.item<double>())/(-tau);
+```
+
+![ans](pic/ans.png)
+
+| 周期（或者粒子个数）L（本程序仅适用于偶数） | 4 | 6 | 8 | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 粒子的自旋量子数 s | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0/2 |
+| 矩阵非物理指标的维数 D | 4 | 4 | 4 | 4 | 4 | 6 | 8 | 9 | 10 | 4 |
+| 单位虚时 $\tau$ | 0.01 | 0.01 | 0.01 | 0.05 | 0.005 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 |
+| 基态能量 g_E | -1.37409 | -1.37409 | -1.37409 | -1.37676 | -1.37379 | -1.39972 | -1.40112 | -1.40118 | -1.40125 | -0.441079 |
