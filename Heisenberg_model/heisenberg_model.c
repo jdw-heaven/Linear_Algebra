@@ -1,7 +1,7 @@
 //spin-1/2 AF Heisenberg_model
 #include "include/header_file.h"
 
-const int L = 3;    //the size of sublattice
+const int L = 2;    //the size of sublattice
 const double error = 1e-4;
 
 int main(void)

@@ -10,6 +10,7 @@
 #include <lapacke.h>
 #include "/home/heaven/Desktop/doc/Linear_Algebra/m_header_file/random_num/mt19937ar-master/mt19937ar.c"
 
+
 //print tensor
 void m_cprint(double complex *A, int row, int column){
     for(int i = 0; i < row; i++){

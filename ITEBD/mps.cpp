@@ -120,7 +120,7 @@ int main(void)
             A[(i+1)%L] = VH.slice(0,0,D).clone().reshape({D,d,D});
             A[(i+1)%L] = torch::einsum("abc,c->abc",{A[(i+1)%L],torch::reciprocal(Gamma[(i+1)%L])});
 
-
+            
             torch::Tensor E = torch::norm(S,2);
             Gamma[i] = Gamma[i]/E.item<double>();
             Gamma[i] = Gamma[i]/torch::norm(Gamma[i]).item<double>();

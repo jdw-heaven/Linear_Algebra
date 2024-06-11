@@ -1,0 +1,3 @@
+/home/heaven/Desktop/doc/Linear_Algebra/lanczos/build/CMakeFiles/lanczos.dir
+/home/heaven/Desktop/doc/Linear_Algebra/lanczos/build/CMakeFiles/edit_cache.dir
+/home/heaven/Desktop/doc/Linear_Algebra/lanczos/build/CMakeFiles/rebuild_cache.dir
