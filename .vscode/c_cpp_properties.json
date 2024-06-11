@@ -6,8 +6,8 @@
                 "${workspaceFolder}/**",
                 "/home/heaven/Desktop/doc/libtorch/**",
                 "/home/heaven/Desktop/doc/libtorch/include/torch/csrc/api/include",
-                "/home/heaven/Desktop/doc/CLAPACK/INCLUDE"
-                // "/home/heaven/Desktop/my_env/root_env/include"
+                "/home/heaven/Desktop/doc/CLAPACK/INCLUDE",
+                "/home/heaven/Desktop/my_env/root_env/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
