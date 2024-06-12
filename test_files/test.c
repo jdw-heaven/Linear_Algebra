@@ -38,67 +38,6 @@ double complex m_ipro(double complex *a, double complex *b, int n){
     return c;
 }
 
-//is unitary?
-void m_isUnitary(double complex *A, int n){
-    double complex *U;
-    U = (double complex *)malloc(n*n*sizeof(double complex));
-    for(int i = 0; i < n*n; i++){
-        U[i] = 0+0*I;
-    }
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            for(int k = 0; k < n; k++){
-                U[i*n+j] += conj(A[k*n+i])*A[k*n+j];
-            }
-        }
-    }
-    m_cprint(U, n, n);
-    free(U);
-}
-
-//is ermie?
-void m_isermie(double complex *A, int n){
-    int isermie = 1;
-    for(int i=0; i<n; i++){
-        if( fabs(cimag(A[i*n+i])) > 1e-10 ){
-            isermie = 0;
-        }else{
-            ;
-        }
-    }
-    for(int i=0; i<n-1; i++){
-        for(int j=1; j<n; j++){
-            if( fabs(cimag(A[i*n+j])+cimag(A[j*n+i])) > 1e-10 ){
-                isermie = 0;
-            }else{
-                ;
-            }
-        }
-    }
-    if( isermie == 0 ){
-        printf("Not ermie.\n");
-    }else{
-        printf("Ermie.\n");
-    }
-}
-
-//multiply
-double complex * m_mul(double complex *A, double complex *B, int Arow, int Acolumn, int Bcolumn){
-    double complex *C;
-    C = (double complex *)malloc(Arow*Bcolumn*sizeof(double complex));
-    for(int i = 0; i < Arow*Bcolumn; i++){
-        C[i] = 0+0*I;
-    }
-    for(int i = 0; i < Arow; i++){
-        for(int j = 0; j < Bcolumn; j++){
-            for(int k = 0; k < Acolumn; k++){
-                C[i*Bcolumn+j] += A[i*Acolumn+k]*B[k*Bcolumn+j];
-            }
-        }
-    }
-    return C;
-    free(C);
-}
 
 // 将 a 的第 b 位取反 ，最低位编号为 0
 int flapBit(int a, int b) { return a ^ (1 << b); }
@@ -116,7 +55,7 @@ void m_Hf(double complex *v, double complex *f, double Delta){
                 v[j] -= Delta*f[j]/4;
                 num = flapBit(flapBit(j,(i+1)%L),i);
                 v[num] += f[num]/2;
-            }    
+            }   
         }
     }
 }
