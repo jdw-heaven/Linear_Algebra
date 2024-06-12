@@ -56,27 +56,30 @@ void m_Hf(double complex *v, double complex *f, double Delta){
             }else{
                 v[j] -= Delta*f[j]/4;
                 num = flapBit(flapBit(j,(i+1)%L),i);
-                v[num] += f[num]/2;
+                v[num] += f[j]/2;
             }    
         }
     }
 }
 
+
 //lanczos iteration
 double m_lanczos(double Delta){
 
     double* alpha;
-    alpha = (double*)malloc((1<<L)*sizeof(double));
+    alpha = (double*)calloc((1<<L),sizeof(double));
     double* beta;
-    beta = (double*)malloc((1<<L)*sizeof(double));
+    beta = (double*)calloc((1<<L),sizeof(double));
 
     double complex* f;
-    f = (double complex*)malloc((1<<L)*sizeof(double complex));
+    f = (double complex*)calloc((1<<L),sizeof(double complex));
     
     double complex* v;
-    v = (double complex*)malloc((1<<L)*sizeof(complex double));
+    v = (double complex*)calloc((1<<L),sizeof(complex double));
     double complex* fp;
-    fp = (double complex*)malloc((1<<L)*sizeof(double complex));
+    fp = (double complex*)calloc((1<<L),sizeof(double complex));
+    double E = 0;
+    double Ep = 1;
     
     for(int i=0; i< 1<<L; i++){
         f[i] = genrand_real1()+genrand_real1()*I;
@@ -100,28 +103,35 @@ double m_lanczos(double Delta){
             v[i] = v[i] - alpha[n]*f[i];
         }
         beta[n] = sqrt(creal(m_ipro(v,v,1<<L)));
-        printf("%lf\n", beta[n]);
+        //printf("%lf\n", beta[n]);
         for(int i=0; i< 1<<L; i++){
             fp[i] = f[i];
             f[i] = v[i]/beta[n];
             v[i] = 0+0*I;
         }
-    }while( beta[n] > error && n < 1<<L );
+        if(n%17==0){
+            Ep = E;
+            //求解本征值
+            double* A;
+            A = (double*)calloc(n*n,sizeof(double));
+            for(int i=0; i<n; i++){
+                A[i*n+i] = alpha[i+1];
+            }
+            for(int i=0; i<n-1; i++){
+                A[i*n+i+1] = beta[i+1];
+                A[(i+1)*n+i] = beta[i+1];
+            }
+            double *a;
+            a = (double *)calloc(n,sizeof(double));
+            LAPACKE_dsyev(LAPACK_COL_MAJOR,'N','U',n,A,n,a);
+            E = a[0];
+            free(a);
+            free(A);
+        }
+    }while( abs(E-Ep) > error );
 
-    //求解本征值
-    double* A;
-    A = (double*)malloc(n*n*sizeof(double));
-    for(int i=0; i<n; i++){
-        A[i*n+i] = alpha[i+1];
-    }
-    for(int i=0; i<n-1; i++){
-        A[i*n+i+1] = beta[i+1];
-        A[(i+1)*n+i] = beta[i+1];
-    }
-    double *a;
-    a = (double *)malloc(n*sizeof(double));
-    LAPACKE_dsyev(LAPACK_COL_MAJOR,'N','U',n,A,n,a);
-    // m_print(a,1,n);
+
+
 
     free(f);
     free(fp);
@@ -129,7 +139,7 @@ double m_lanczos(double Delta){
     free(alpha);
     free(beta);
 
-    return a[0]/L;
+    return E;
 }
 
 
