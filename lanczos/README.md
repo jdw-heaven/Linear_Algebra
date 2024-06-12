@@ -110,3 +110,4 @@ $S^{x}\ket{\uparrow} = 1/2\ket{\downarrow},S^{x}\ket{\downarrow} = 1/2\ket{\upar
 我选择后者。
 
 关于f的存储，2个就够了，来回访问。因为我们不算特征向量。
+

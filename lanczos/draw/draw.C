@@ -3,10 +3,11 @@
 #include <TFile.h>
 #include <iostream>
 #include <fstream>
+#include <TAxis.h>
 
 void DrawGraph() {
     // 打开文件
-    std::ifstream file("/home/heaven/Desktop/doc/Linear_Algebra/lanczos/draw/data.txt");
+    std::ifstream file("/home/heaven/Desktop/doc/Linear_Algebra/lanczos/draw/data/data12_13_2.txt");
     double x, y;
     TGraph *graph = new TGraph();
 
@@ -19,7 +20,8 @@ void DrawGraph() {
     while (file >> x >> y) {
         graph->SetPoint(graph->GetN(), x, y);
     }
-
+    graph->GetXaxis()->SetTitle("Delta");
+    graph->GetYaxis()->SetTitle("Total Ground Energy");
     // 关闭文件
     file.close();
 
@@ -33,8 +35,10 @@ void DrawGraph() {
     c1->SetGrid(); // 开启网格
     c1->SetGridx(); // 网格水平线
     c1->SetGridy(); // 网格垂直线
+    graph->SetTitle("Lanczos alogrithm, num = 12, error = 1e-13");
     // 绘制图形
-    graph->Draw("AP");
+    graph->Draw("ALP");
+
 
     // 保存画布为 ROOT 文件
     TFile *fileRoot = new TFile("/home/heaven/Desktop/doc/Linear_Algebra/lanczos/draw/graph.root", "RECREATE");

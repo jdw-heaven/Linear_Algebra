@@ -6,10 +6,10 @@ spin-1/2 XXY 反铁磁链基态能量求解
 int main(void)
 {
     FILE *data;
-    data = fopen("draw/data/data.txt", "w");
+    data = fopen("draw/data/data12_13_2.txt", "w");
     init_genrand(time(NULL));
 
-    for(double Delta = -1.5; Delta <1.51; Delta += 0.01){
+    for(double Delta = -2.0; Delta <2.01; Delta += 0.01){
         fprintf(data, "%lf %lf\n", Delta, m_lanczos(Delta));
     }
 

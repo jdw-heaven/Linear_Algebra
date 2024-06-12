@@ -69,5 +69,9 @@ lanczos/draw/draw_C.so: /home/heaven/Desktop/my_env/root_env/include/TUrl.h
 lanczos/draw/draw_C.so: /home/heaven/Desktop/my_env/root_env/include/ROOT/RConcurrentHashColl.hxx
 lanczos/draw/draw_C.so: /home/heaven/Desktop/my_env/root_env/include/ROOT/TRWSpinLock.hxx
 lanczos/draw/draw_C.so: /home/heaven/Desktop/my_env/root_env/include/ROOT/TSpinMutex.hxx
+lanczos/draw/draw_C.so: /home/heaven/Desktop/my_env/root_env/include/TAxis.h
+lanczos/draw/draw_C.so: /home/heaven/Desktop/my_env/root_env/include/TAttAxis.h
+lanczos/draw/draw_C.so: /home/heaven/Desktop/my_env/root_env/include/TArrayD.h
+lanczos/draw/draw_C.so: /home/heaven/Desktop/my_env/root_env/include/TArray.h
 lanczos/draw/draw_C.so: /home/heaven/Desktop/my_env/root_env/include/RVersion.h /home/heaven/Desktop/my_env/root_env/include/ROOT/RConfig.hxx /home/heaven/Desktop/my_env/root_env/include/TClass.h /home/heaven/Desktop/my_env/root_env/include/TDictAttributeMap.h /home/heaven/Desktop/my_env/root_env/include/TInterpreter.h /home/heaven/Desktop/my_env/root_env/include/TROOT.h /home/heaven/Desktop/my_env/root_env/include/TBuffer.h /home/heaven/Desktop/my_env/root_env/include/TMemberInspector.h /home/heaven/Desktop/my_env/root_env/include/TError.h /home/heaven/Desktop/my_env/root_env/include/RtypesImp.h /home/heaven/Desktop/my_env/root_env/include/TIsAProxy.h /home/heaven/Desktop/my_env/root_env/include/TFileMergeInfo.h /home/heaven/Desktop/my_env/root_env/include/TCollectionProxyInfo.h /home/heaven/Desktop/my_env/root_env/bin/rootcling
 draw_C__ROOTBUILDVERSION= 6.30/04

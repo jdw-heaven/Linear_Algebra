@@ -11,7 +11,7 @@
 #include "/home/heaven/Desktop/doc/Linear_Algebra/m_header_file/random_num/mt19937ar-master/mt19937ar.c"
 
 const int L = 12;   //单周期内的粒子数
-const double error = 1e-10; //数值零
+const double error = 1e-13; //数值零
 
 //print tensor
 void m_cprint(double complex *A, int row, int column){
