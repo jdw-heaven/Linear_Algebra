@@ -141,7 +141,7 @@ double m_lanczos(double Delta){
     fp = (double complex*)malloc((1<<L)*sizeof(double complex));
     
     for(int i=0; i< 1<<L; i++){
-        f[i] = genrand_real1()+genrand_real1()*i;
+        f[i] = genrand_real1()+genrand_real1()*I;
     }
     double norm = sqrt(creal(m_ipro(f,f,1<<L)));
     //printf("%lf\n", norm);
@@ -157,14 +157,16 @@ double m_lanczos(double Delta){
             v[i] = v[i] - beta[n-1]*fp[i];
         }//更好的数值稳定性
         alpha[n] = creal(m_ipro(f,v,1<<L));
+        //printf("%lf\n", alpha[n]);
         for(int i=0; i< 1<<L; i++){
             v[i] = v[i] - alpha[n]*f[i];
         }
         beta[n] = sqrt(creal(m_ipro(v,v,1<<L)));
+        printf("%lf\n", beta[n]);
         for(int i=0; i< 1<<L; i++){
             fp[i] = f[i];
             f[i] = v[i]/beta[n];
-            v[i] = 0+0*i;
+            v[i] = 0+0*I;
         }
     }while( beta[n] > error && n < 1<<L );
 
@@ -182,6 +184,12 @@ double m_lanczos(double Delta){
     a = (double *)malloc(n*sizeof(double));
     LAPACKE_dsyev(LAPACK_COL_MAJOR,'N','U',n,A,n,a);
     // m_print(a,1,n);
+
+    free(f);
+    free(fp);
+    free(v);
+    free(alpha);
+    free(beta);
 
     return a[0]/L;
 }

@@ -32,7 +32,7 @@ F_{ij} &= f_{i}^{\dag}Hf_{j} \\
 F_{ij}^{*} &=  f_{j}^{\dag}H^{\dag}f_{i} = f_{j}^{\dag}Hf_{i} \\
 \end{aligned}
 $$
-由于$Hf_{j} \in span \left\{f_{1}, f_{2}, \cdots, f_{j+1} \right\}$，因此当$i > j+1 or j > i+1$时，$F_{ij} = 0$，得证。
+由于$Hf_{j} \in span \left\{f_{1}, f_{2}, \cdots, f_{j+1} \right\}$，因此当$i > j+1 or j > i+1$时，$F_{ij} = 0$。
 
 上面我们直接给出了F矩阵元的表达式，当然只是为了方便起见，下面我们将给出Lanczos算法的构造过程。
 
@@ -95,7 +95,9 @@ $H = \sum (S_{i}^{x}S_{i+1}^{x}+S_{i}^{y}S_{i+1}^{y}+\Delta S_{i}^{z}S_{i+1}^{z}
 
 #### 1. function m_Hf
 
-我采用”black box“的形式，不给出
+我采用”black box“的形式，不给出哈密顿量对应的矩阵形式，而是直接用位运算flapBit。
+
+这样我们可以节省存储哈密顿量的那个超大空间。但是这只适用于spin-1/2。
 
 自旋1/2的粒子与计算机的二进制正好对应，因此，我们将采用位运算的方式。另外注意到：
 $S^{x}\ket{\uparrow} = 1/2\ket{\downarrow},S^{x}\ket{\downarrow} = 1/2\ket{\uparrow};S^{y}\ket{\uparrow} = i/2\ket{\downarrow},S^{y}\ket{\downarrow} = -i/2\ket{\uparrow} $
@@ -107,4 +109,4 @@ $S^{x}\ket{\uparrow} = 1/2\ket{\downarrow},S^{x}\ket{\downarrow} = 1/2\ket{\upar
 首先，在存储alpha和beta的算法上，我们有两种选择：1. 增加时间复杂度，我们先赋一个较小的空间；在迭代过程中进行判断是否需要扩充。 2. 增加空间复杂度，将alpha、beta的大小就设为Hilbert空间的维数。
 我选择后者。
 
-关于f的存储，2个就够了，来回访问。
+关于f的存储，2个就够了，来回访问。因为我们不算特征向量。

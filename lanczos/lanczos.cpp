@@ -31,14 +31,13 @@ void m_Hf(torch::Tensor& v, torch::Tensor& f, double Delta){
 }
 //lanczos iteration
 double m_lanczos(double Delta){
-    torch::Tensor alpha = torch::zeros({1<<L}, torch::kDouble);
-    torch::Tensor beta = torch::zeros({1<<L}, torch::kDouble);
-
-    torch::Tensor fr = torch::zeros(1<<L, torch::kDouble);
-    torch::Tensor fi = torch::zeros(1<<L, torch::kDouble);
-    torch::Tensor f = torch::complex(fr,fi);
-    torch::Tensor v = torch::complex(fr,fi);
-    torch::Tensor fp = torch::complex(fr,fi);
+    torch::Tensor real = torch::zeros(1<<L, torch::kDouble);
+    torch::Tensor imag = torch::zeros(1<<L, torch::kDouble);
+    torch::Tensor f = torch::complex(real,imag);
+    torch::Tensor v = torch::complex(real,imag);
+    torch::Tensor fp = torch::complex(real,imag);
+    torch::Tensor alpha = torch::complex(real,imag);
+    torch::Tensor beta = torch::complex(real,imag);
     
     f = torch::randn(1<<L, torch::kComplexDouble);
     f = f/torch::norm(f);
@@ -47,26 +46,27 @@ double m_lanczos(double Delta){
     do{
         n += 1;
         m_Hf(v,f,Delta);
-        v = v - beta[n-1]*fp;
         alpha[n] = torch::einsum("i,i->", {torch::conj(f),v});
-        v = v - alpha[n]*f;  //增加数值稳定性
+        v = v - alpha[n]*f - beta[n-1]*fp;
         beta[n] = torch::norm(v);
         fp = f;
         f = v/beta[n];
-        v = torch::complex(fr,fi);
+        v = torch::complex(real,imag);
     }while( beta[n].item<double>() > error );
 
     //求解本征值
-    torch::Tensor L = torch::zeros({n,n}, torch::kDouble);
+    torch::Tensor Lr = torch::zeros({n,n}, torch::kDouble);
+    torch::Tensor Li = torch::zeros({n,n}, torch::kDouble);
+    torch::Tensor L = torch::complex(Lr,Li);
     for(int i=0; i<n; i++){
         L[i][i] = alpha[i+1];
     }
     for(int i=0; i<n-1; i++){
-        L[i][i+1] = beta[i+1];
+        L[i][i+1] = torch::conj(beta[i+1]);
         L[i+1][i] = beta[i+1];
     }
 
-    torch::Tensor e = torch::linalg_eigvalsh(L);
+    auto e = torch::linalg_eigvalsh(L);
     //std::cout << e <<std::endl;
     double g_E = e[0].item<double>();
 
@@ -81,7 +81,7 @@ int main(void)
     }
     */
     
-    double Delta = 1.0;
+    double Delta = 0.5;
     std::cout << m_lanczos(Delta) << std::endl;
     return 0;
 }

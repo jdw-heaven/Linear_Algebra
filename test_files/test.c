@@ -1,20 +1,111 @@
-/*
-spin-1/2 XXY 反铁磁链基态能量求解
-*/
-#include <iostream>
-#include <complex>
-#include <torch/torch.h>
-#include <cmath>
+//the fundamental header file need
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+#include <complex.h>
+#include <lapacke.h>
+#include "/home/heaven/Desktop/doc/Linear_Algebra/m_header_file/random_num/mt19937ar-master/mt19937ar.c"
 
 const int L = 12;   //单周期内的粒子数
-const double error = 1e-12; //数值零
+const double error = 1e-10; //数值零
+
+//print tensor
+void m_cprint(double complex *A, int row, int column){
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < column; j++){
+            printf("%3.4lf+i%3.4lf  ", creal(A[i*column+j]), cimag(A[i*column+j]));
+        }printf("\n");
+    }printf("\n");
+}
+void m_print(double *A, int row, int column){
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < column; j++){
+            printf("%3.4lf  ", A[i*column+j]);
+        }printf("\n");
+    }printf("\n");
+}
+
+//inner product :c = <a, b>
+double complex m_ipro(double complex *a, double complex *b, int n){
+    double complex c;
+    c = 0 + 0*I;
+
+    for(int i = 0; i < n; i++){
+        c += conj(a[i])*b[i];
+    }
+
+    return c;
+}
+
+//is unitary?
+void m_isUnitary(double complex *A, int n){
+    double complex *U;
+    U = (double complex *)malloc(n*n*sizeof(double complex));
+    for(int i = 0; i < n*n; i++){
+        U[i] = 0+0*I;
+    }
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            for(int k = 0; k < n; k++){
+                U[i*n+j] += conj(A[k*n+i])*A[k*n+j];
+            }
+        }
+    }
+    m_cprint(U, n, n);
+    free(U);
+}
+
+//is ermie?
+void m_isermie(double complex *A, int n){
+    int isermie = 1;
+    for(int i=0; i<n; i++){
+        if( fabs(cimag(A[i*n+i])) > 1e-10 ){
+            isermie = 0;
+        }else{
+            ;
+        }
+    }
+    for(int i=0; i<n-1; i++){
+        for(int j=1; j<n; j++){
+            if( fabs(cimag(A[i*n+j])+cimag(A[j*n+i])) > 1e-10 ){
+                isermie = 0;
+            }else{
+                ;
+            }
+        }
+    }
+    if( isermie == 0 ){
+        printf("Not ermie.\n");
+    }else{
+        printf("Ermie.\n");
+    }
+}
+
+//multiply
+double complex * m_mul(double complex *A, double complex *B, int Arow, int Acolumn, int Bcolumn){
+    double complex *C;
+    C = (double complex *)malloc(Arow*Bcolumn*sizeof(double complex));
+    for(int i = 0; i < Arow*Bcolumn; i++){
+        C[i] = 0+0*I;
+    }
+    for(int i = 0; i < Arow; i++){
+        for(int j = 0; j < Bcolumn; j++){
+            for(int k = 0; k < Acolumn; k++){
+                C[i*Bcolumn+j] += A[i*Acolumn+k]*B[k*Bcolumn+j];
+            }
+        }
+    }
+    return C;
+    free(C);
+}
 
 // 将 a 的第 b 位取反 ，最低位编号为 0
 int flapBit(int a, int b) { return a ^ (1 << b); }
 // 获取 a 的第 b 位，最低位编号为 0
 int getBit(int a, int b) { return (a >> b) & 1; }
 // H作用在f上
-void m_Hf(torch::Tensor& v, torch::Tensor& f, double Delta){
+void m_Hf(double complex *v, double complex *f, double Delta){
     // v一定要是空向量
     int num = 0;
     for(int j=0; j<(1<<L); j++){
@@ -29,59 +120,84 @@ void m_Hf(torch::Tensor& v, torch::Tensor& f, double Delta){
         }
     }
 }
+
 //lanczos iteration
 double m_lanczos(double Delta){
-    torch::Tensor alpha = torch::zeros({1<<L}, torch::kDouble);
-    torch::Tensor beta = torch::zeros({1<<L}, torch::kDouble);
 
-    torch::Tensor fr = torch::zeros(1<<L, torch::kDouble);
-    torch::Tensor fi = torch::zeros(1<<L, torch::kDouble);
-    torch::Tensor f = torch::complex(fr,fi);
-    torch::Tensor v = torch::complex(fr,fi);
-    torch::Tensor fp = torch::complex(fr,fi);
+    double* alpha;
+    alpha = (double*)malloc((1<<L)*sizeof(double));
+    double* beta;
+    beta = (double*)malloc((1<<L)*sizeof(double));
+
+    double complex* f;
+    f = (double complex*)malloc((1<<L)*sizeof(double complex));
     
-    f = torch::randn(1<<L, torch::kComplexDouble);
-    f = f/torch::norm(f);
+    double complex* v;
+    v = (double complex*)malloc((1<<L)*sizeof(complex double));
+    double complex* fp;
+    fp = (double complex*)malloc((1<<L)*sizeof(double complex));
+    
+    for(int i=0; i< 1<<L; i++){
+        f[i] = genrand_real1()+genrand_real1()*I;
+    }
+    double norm = sqrt(creal(m_ipro(f,f,1<<L)));
+    //printf("%lf\n", norm);
+    for(int i=0; i< 1<<L; i++){
+        f[i] = f[i]/norm;
+    }
 
     int n = 0;
     do{
         n += 1;
         m_Hf(v,f,Delta);
-        v = v - beta[n-1]*fp;
-        alpha[n] = torch::einsum("i,i->", {torch::conj(f),v});
-        v = v - alpha[n]*f;  //增加数值稳定性
-        beta[n] = torch::norm(v);
-        fp = f;
-        f = v/beta[n];
-        v = torch::complex(fr,fi);
-    }while( beta[n].item<double>() > error );
+        for(int i=0; i< 1<<L; i++){
+            v[i] = v[i] - beta[n-1]*fp[i];
+        }//更好的数值稳定性
+        alpha[n] = creal(m_ipro(f,v,1<<L));
+        //printf("%lf\n", alpha[n]);
+        for(int i=0; i< 1<<L; i++){
+            v[i] = v[i] - alpha[n]*f[i];
+        }
+        beta[n] = sqrt(creal(m_ipro(v,v,1<<L)));
+        //printf("%lf\n", beta[n]);
+        for(int i=0; i< 1<<L; i++){
+            fp[i] = f[i];
+            f[i] = v[i]/beta[n];
+            v[i] = 0+0*I;
+        }
+    }while( beta[n] > error && n < 1<<L );
 
     //求解本征值
-    torch::Tensor L = torch::zeros({n,n}, torch::kDouble);
+    double* A;
+    A = (double*)malloc(n*n*sizeof(double));
     for(int i=0; i<n; i++){
-        L[i][i] = alpha[i+1];
+        A[i*n+i] = alpha[i+1];
     }
     for(int i=0; i<n-1; i++){
-        L[i][i+1] = beta[i+1];
-        L[i+1][i] = beta[i+1];
+        A[i*n+i+1] = beta[i+1];
+        A[(i+1)*n+i] = beta[i+1];
     }
+    double *a;
+    a = (double *)malloc(n*sizeof(double));
+    LAPACKE_dsyev(LAPACK_COL_MAJOR,'N','U',n,A,n,a);
+    // m_print(a,1,n);
 
-    torch::Tensor e = torch::linalg_eigvalsh(L);
-    //std::cout << e <<std::endl;
-    double g_E = e[0].item<double>();
-
-    return g_E;
+    return a[0];
 }
 
 int main(void)
 {
-    /*
-    for(double Delta = -1.5; Delta <=1.5; Delta += 0.05){
-        std::cout << m_lanczos(Delta) << std::endl;
+    FILE *data;
+    data = fopen("../lanczos/draw/data.txt", "w");
+    init_genrand(time(NULL));
+
+    for(double Delta = -1.5; Delta <1.51; Delta += 0.01){
+        fprintf(data, "%lf %lf\n", Delta, m_lanczos(Delta));
     }
-    */
-    
-    double Delta = 1.0;
-    std::cout << m_lanczos(Delta) << std::endl;
+
+
+    // double Delta = -1.0;
+    // printf("%lf\n", m_lanczos(Delta));
+    fclose(data);
     return 0;
 }

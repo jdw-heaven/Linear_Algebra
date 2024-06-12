@@ -29,7 +29,10 @@ void DrawGraph() {
 
     // 创建画布
     TCanvas *c1 = new TCanvas("c1", "Graph Example", 800, 600);
-
+    // 设置网格样式
+    c1->SetGrid(); // 开启网格
+    c1->SetGridx(); // 网格水平线
+    c1->SetGridy(); // 网格垂直线
     // 绘制图形
     graph->Draw("AP");
 

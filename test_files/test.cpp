@@ -36,16 +36,14 @@ void m_Hf(torch::Tensor& v, torch::Tensor& f, double Delta){
 int main(void)
 {
     torch::Tensor fr = torch::tensor({1,2,3,4}, torch::kDouble);
-    torch::Tensor fi = torch::zeros(4, torch::kDouble);
+    torch::Tensor fi = torch::zeros({1,2,3,4}, torch::kDouble);
     torch::Tensor f = torch::complex(fr,fi);
-    torch::Tensor vr = torch::zeros(4, torch::kDouble);
-    torch::Tensor v = torch::complex(vr,fi);
 
-    double Delta = 0;
-    m_Hf(v,f,Delta);
+    auto v = torch::norm(f);
 
-    std::cout << torch::real(v) << std::endl;
-    std::cout << torch::imag(v) << std::endl;
+
+    std::cout << v << std::endl;
+
 
     return 0;
 }
