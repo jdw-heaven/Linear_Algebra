@@ -49,7 +49,7 @@ f_{2} = \omega^{\prime}_{1}/\beta_{1} \\
 $$
 
 上面其实就是简单的Gram-Schmit正交化的过程。需要注意的是，由于H是厄米的，因此$\alpha_{1}$一定是一个实数。还有就是$\beta_{1}$的表达式可以转换一下：
-$\beta_{1}^{2} = (\omega-\alpha_{1}f_{1})^{\dag}(\omega-\alpha_{1}f_{1}) = (Hf_{1})^{\dag}Hf_{1} - \alpha^{2} = (\alpha_{1}f_{1}+\beta_{1}f_{2})^{\dag}Hf_{1} \Rightarrow \beta_{1} = f_{2}^{\dag}Hf_{1} $。
+$\beta_{1}^{2} = (\omega-\alpha_{1}f_{1})^{\dag}(\omega-\alpha_{1}f_{1}) = (Hf_{1})^{\dag}Hf_{1} - \alpha^{2} = (\alpha_{1}f_{1}+\beta_{1}f_{2})^{\dag}Hf_{1} \Rightarrow \beta_{1} = f_{2}^{\dag}Hf_{1} $。这里我们另$\beta$为实数。
 
 我们再推几个：
 
@@ -70,7 +70,6 @@ $HF = F\Lambda + \beta_{k}If_{k+1}^{\intercal} $
 其中$F = \begin{bmatrix} f_{1}\quad f_{2}\quad \cdots\quad f_{k} \end{bmatrix}, \Lambda = \begin{bmatrix}\alpha_{1} & \beta_{1} & & \cdots & 0 \\ \beta_{1} & \alpha_{2} & \ddots & & \vdots \\ & \ddots & \ddots & \ddots & \\ \vdots & & \ddots & \ddots & \beta_{k-1} \\0 & \cdots & & \beta_{k-1} & \alpha_{k} \\ \end{bmatrix} $。
 
 设$\mathbf{x}$是$\Lambda$的本征矢，则$HF\mathbf{x} = \lambda F\mathbf{x} + \beta_{k}If_{k+1}^{\intercal}\mathbf{x}$。
-只要$\beta_{k}$足够小，我们就可以认为$\lambda$就可以用来近似H的本征值。
 
 #### 3. pseudocode
 
@@ -103,6 +102,12 @@ $H = \sum (S_{i}^{x}S_{i+1}^{x}+S_{i}^{y}S_{i+1}^{y}+\Delta S_{i}^{z}S_{i+1}^{z}
 $S^{x}\ket{\uparrow} = 1/2\ket{\downarrow},S^{x}\ket{\downarrow} = 1/2\ket{\uparrow};S^{y}\ket{\uparrow} = i/2\ket{\downarrow},S^{y}\ket{\downarrow} = -i/2\ket{\uparrow} $
 正好对应于位运算中的翻转运算，因此我们避免使用梯子算符来计算而是直接使用自旋分量算符。
 
+对于海森堡链：
+$\sum_{i} (S_{i}^{x}S_{i+1}^{x}+S_{i}^{y}S_{i+1}^{y}+\Delta S_{i}^{z}S_{i+1}^{z}) \ket{\ldots \uparrow_{i}\uparrow_{i+1} \ldots} = \sum_{i} (\Delta/4\ket{\ldots \uparrow_{i}\uparrow_{i+1} \ldots}) $
+$\sum_{i} (S_{i}^{x}S_{i+1}^{x}+S_{i}^{y}S_{i+1}^{y}+\Delta S_{i}^{z}S_{i+1}^{z}) \ket{\ldots \downarrow_{i}\downarrow_{i+1} \ldots} = \sum_{i} (\Delta/4\ket{\ldots \downarrow_{i}\downarrow_{i+1} \ldots}) $
+$\sum_{i} (S_{i}^{x}S_{i+1}^{x}+S_{i}^{y}S_{i+1}^{y}+\Delta S_{i}^{z}S_{i+1}^{z}) \ket{\ldots \uparrow_{i}\downarrow_{i+1} \ldots} = \sum_{i} (-\Delta/4\ket{\ldots \uparrow_{i}\downarrow_{i+1} \ldots}+1/2\ket{\ldots \downarrow_{i}\uparrow_{i+1} \ldots}) $
+$\sum_{i} (S_{i}^{x}S_{i+1}^{x}+S_{i}^{y}S_{i+1}^{y}+\Delta S_{i}^{z}S_{i+1}^{z}) \ket{\ldots \downarrow_{i}\uparrow_{i+1} \ldots} = \sum_{i} (-\Delta/4\ket{\ldots \downarrow_{i}\uparrow_{i+1} \ldots}+1/2\ket{\ldots \uparrow_{i}\downarrow_{i+1} \ldots}) $
+
 
 #### 2. function m_lanczos
 
@@ -111,3 +116,37 @@ $S^{x}\ket{\uparrow} = 1/2\ket{\downarrow},S^{x}\ket{\downarrow} = 1/2\ket{\upar
 
 关于f的存储，2个就够了，来回访问。因为我们不算特征向量。
 
+需要注意的是循环结束的条件，这里需要计算三对角矩阵的本征值，最小的那个及对应基态能量的估计值；因此当两次迭代出来的E相差不大时，我们认为其收敛。
+
+当然，这种中间涉及到一些理论，即为什么最小的本征值对应基态能量？在[^1]的书中也有介绍，是有定理保证的。
+
+#### 3. NOTE
+
+最后说一下我在编写时遇到的问题：
+1. 在构造哈密顿量作用时，要注意系数的对应，否则会出问题。
+2. calloc才是会把变量初始化为零的函数，malloc不是。这个我用了好久都没有问题，这次有问题了，不过是放在循环内部，可能局部变量空间比较小。
+
+# 结果
+
+通过改变参数计算，得出了相变点为$\Delta = -1.0 $的结论。
+
+参数：
+1. [x] L 周期内的粒子数  
+2. [x] range Delta取值区间
+3. [x] error 允许误差
+4. [x] num 样本数
+
+**1. L = 12, range = [-1.5,1.5], error = 1e-13, num = 301**
+![](pic/12_13.svg)
+
+**1. L = 12, range = [-2.0,2.0], error = 1e-13, num = 401**
+![](pic/12_13_2.svg)
+
+**1. L = 12, range = [-1.5,1.5], error = 1e-15, num = 301**
+![](pic/12_15.svg)
+
+**1. L = 14, range = [-1.5,1.5], error = 1e-13, num = 301**
+![](pic/14_13.svg)
+
+**1. L = 16, range = [-1.5,1.5], error = 1e-13, num = 301**
+![](pic/16_13.svg)
